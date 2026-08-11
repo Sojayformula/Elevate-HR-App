@@ -1,16 +1,19 @@
 import { Routes } from '@angular/router';
-import { Employee } from './elevat/employee/employee';
-import { Leave } from './elevat/leave/leave';
-import { Pagelayout } from './elevat/pagelayout/pagelayout';
+import { Pagelayout } from './elevate/pagelayout/pagelayout';
+import { User } from './elevate/user/user';
+import { Dashboard } from './elevate/dashboard/dashboard';
+import { Elevate } from './elevate/elevate/elevate';
+import { MyActive } from './elevate/my-active/my-active';
 
 export const routes: Routes = [
 
 
     {path: "", component: Pagelayout,
         children:[
-    {path: "", redirectTo: "employee", pathMatch: "full"},
-    {path: "employee", component: Employee},
-    {path: "leave", component: Leave},
+    {path: "", redirectTo: "dashboard", pathMatch: "full"},
+    {path: "dashboard", component: Dashboard},
+    {path: "elevate", component: Elevate},
+     {path: "myActive", component: MyActive},
 
         ]
     }
