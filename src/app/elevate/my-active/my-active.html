@@ -1,7 +1,254 @@
  <!-- ACTIVITIES -->
+ <main class="h-full bg-[#f6f7f9] text-[#171717]">
+    <div class="relative top-5">
 
-    <!-- @if (activeTab === 'dashboard') { -->
-     <div class="flex items-center justify-center mt-20">
+    <header>
+        <!-- my activities button -->
+      <button class="flex gap-2 cursor-pointer mx-20 text-[13px] font-bold">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" 
+          width="20" height="20" viewBox="0 0 24 24" 
+          fill="none" stroke="currentColor" stroke-width="2" 
+          stroke-linecap="round" stroke-linejoin="round" 
+          class="lucide lucide-arrow-left-icon lucide-arrow-left">
+          <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </span>
+        My Activities 
+      </button>
+
+     <div class="mx-20 py- 20">
+
+      <div class="">
+        <h2 class="text-lg font-semibold mt-10">
+            ELEVATE – Q3 (July – September 2026)
+          </h2>
+
+        <p class="mt- 2 text-sm text-gray-500">
+          Kindly set targets before agreed deadline
+        </p>
+        </div>
+       
+
+      </div>
+      </header>
+
+
+      <section>
+        <div class="mx-20  py-8 bg-white mt-10 border border-gray-300 rounded-[10px]">
+          
+          
+        <div class="min-h-[50px] border-gray-200 px-20 flex items-center gap-3">
+
+          <!-- Targets -->
+
+          <div
+            class="flex items-center gap-2
+                   whitespace-nowrap
+                   text-sm text-gray-900"
+          >
+
+            <span
+              class="w-5 h-5
+                     rounded-full
+                     bg-[#3f91df]
+                     text-white
+                     flex items-center justify-center
+                     text-[10px]"
+            >
+              ✓
+            </span>
+
+            Targets
+
+          </div>
+
+
+          <!-- Line -->
+          <hr class="w-40 border border-gray-200">
+
+          <!-- Self Review -->
+
+          <div class="flex items-center gap-2 whitespace-nowrap text-sm text-gray-400">
+            <span class="w-5 h-5 rounded-full border border-gray-200 flex items-center justify-center text-[10px]">
+              2
+            </span>
+
+            Self-Review
+
+          </div>
+
+           <!-- line -->
+        <hr class="w-40 border border-gray-200">
+
+        <!-- Self Review -->
+             <div class="flex items-center gap-2 whitespace-nowrap text-sm text-gray-400">
+            <span class="w-5 h-5 rounded-full border border-gray-200 flex items-center justify-center text-[10px]">
+              3
+            </span>
+
+            Self-Review
+
+          </div>
+
+
+            <!-- line -->
+        <hr class="w-40 border border-gray-200">
+
+        <!-- Self Review -->
+             <div class="flex items-center gap-2 whitespace-nowrap text-sm text-gray-400">
+            <span class="w-5 h-5 rounded-full border border-gray-200 flex items-center justify-center text-[10px]">
+              4
+            </span>
+
+            Self-Review
+
+          </div>
+
+          </div>
+
+          
+
+          <!-- line -->
+          <div class="h-px flex-1 bg-gray-200 mb- 2">
+
+          </div>
+
+          <div class="flex gap-3 mx-20 relative top-4">
+
+            <!-- Preview targets -->
+            <div class="flex bg-gray-200 px-3 border border-gray-400 rounded-[10px]">
+              <button class="flex items-center cursor-pointer text-[12px] text-gray-500 font-bold">
+                Previe targets
+              </button>
+            </div>
+
+            <!--  -->
+            <div class="text-[14px] font-bold">
+              Your manager has published 
+              target to his cycle. Review 
+              every KPI to guide your progress
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+       <!-- Table -->
+       <section>
+
+        <div class="mt-10 mx-20">
+
+         <div class="text- font-bold text-[13px]">
+           KEY PERFORMANCE INDICATORS
+         </div>
+
+      <div
+        class="bg-white rounded-xl border border-gray-200
+        overflow-hidden shadow-lg"
+      >
+
+        @for (cycle of previousCycles; track $index) {
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-4
+            items-center gap-4
+            px-5 py-5
+            border-b border-gray-100
+            last:border-b-0
+            hover:bg-gray-50 transition"
+          >
+
+            <!-- Cycle name -->
+            <div>
+              <p class="text-sm font-medium text-gray-800">
+                {{ cycle.name }}
+              </p>
+            </div>
+
+
+            <!-- Targets -->
+            <div>
+              <p
+                class="text-[10px] uppercase tracking-wide
+                text-gray-400 font-semibold mb-1"
+              >
+                Targets
+              </p>
+
+              <p class="text-xs text-gray-600">
+                {{ cycle.targets }}
+              </p>
+            </div>
+
+
+            <!-- Performance -->
+            <div>
+              <p
+                class="text-[10px] uppercase tracking-wide
+                text-gray-400 font-semibold mb-1"
+              >
+                Performance
+              </p>
+
+              <p class="text-xs text-gray-600">
+                {{ cycle.performance }}
+              </p>
+            </div>
+
+
+            <!-- View -->
+            <div class="md:text-right">
+
+              <button
+                class="flex items-center gap-2
+                text-xs font-medium text-gray-700
+                hover:text-[#3287d7] transition"
+              >
+                View
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14"/>
+                  <path d="m13 6 6 6-6 6"/>
+                </svg>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        }
+        </div>
+        </div>
+        </section>
+
+
+
+    
+       </div>
+    </main>
+
+   
+
+
+
+
+
+
+
+
+
+       <!-- <div class="flex items-center justify-center mt-20">
 
       <section class="bg-white border border-gray-200 rounded-xl p-9 W-[50REM] shadow-sm">
          <h2 class="text-xl font-semibold">
@@ -19,6 +266,4 @@
           Open Elevate
         </button>
 
-      </section>
-
-      </div>
+      </section> -->

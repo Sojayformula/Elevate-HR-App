@@ -9,4 +9,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('elevate-hr-app');
+
+   activeTab = 'elevate';
+
+  setTab(tab: string) {
+    this.activeTab = tab;
+  }
 }

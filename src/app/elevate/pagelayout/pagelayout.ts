@@ -9,4 +9,22 @@ import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/rou
 })
 export class Pagelayout {
 
+
+       activeTab = 'elevate';
+
+  setTab(tab: string) {
+    this.activeTab = tab;
+  }
+
+  // Active step //
+   currentStep = 1;
+
+  isCompleted(step: number): boolean {
+  return step < this.currentStep;
+}
+
+isCurrent(step: number): boolean {
+  return step === this.currentStep;
+}
+
 }

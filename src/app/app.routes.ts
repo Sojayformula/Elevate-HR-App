@@ -8,13 +8,13 @@ import { MyActive } from './elevate/my-active/my-active';
 export const routes: Routes = [
 
 
-    {path: "", component: Pagelayout,
-        children:[
+    // {path: "", component: Pagelayout,
+    //     children:[
     {path: "", redirectTo: "dashboard", pathMatch: "full"},
     {path: "dashboard", component: Dashboard},
-    {path: "elevate", component: Elevate},
-     {path: "myActive", component: MyActive},
+     {path: "elevate", component: Elevate},
+     {path: "my-active", component: MyActive},
 
-        ]
-    }
+    //     ]
+    // }
 ];
