@@ -8,11 +8,4 @@ import { Component } from '@angular/core';
 })
 export class Dashboard {
 
-
-        activeTab = 'elevate';
-
-  setTab(tab: string) {
-    this.activeTab = tab;
-  }
-
 }
