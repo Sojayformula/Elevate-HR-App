@@ -1,36 +1,80 @@
-import { NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-elevate',
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './elevate.html',
   styleUrl: './elevate.scss',
 })
 export class Elevate {
 
- 
- activeTab = 'dashboard';
 
+     activeTab = 'target';
+      isActiveTab = 'target';
+      currentStep = 1;
+      message = ""
+
+
+      constructor(private router: Router){}
+
+
+      ngOnInit(){
+        
+      }
+
+      // first toggle //
   setTab(tab: string) {
     this.activeTab = tab;
   }
 
+  //  second toggle //
+  tabActive(tab: string){
+    this.isActiveTab = tab
+  }
 
-  constructor(private router: Router){}
 
-
-
-
-  // ELEVATE //
+   // ELEVATE //
    currentCycle = {
+    name: '',
+    targets: 'TARGET',
+    performance: ''
+  };
+
+  previousCycles = [
+    {
+      weight: 'Weight: 60%',
+      application: 'Application Development & Delivery',
+      name: 'TARGE',
+      targets: 'Deliver 100% of assigned tasks within agreed sprint timeline',
+      performance: 'Deliver 100% of assigned tasks within agreed sprint timeline'
+    },
+    {
+      weight: 'Weight: 60%',
+      application: 'Application Development & Delivery',
+      name: 'TARGE',
+      targets: 'Deliver 100% of assigned tasks within agreed sprint timeline',
+      performance: 'Deliver 100% of assigned tasks within agreed sprint timeline'
+    },
+    {
+      weight: 'Weight: 60%',
+      application: 'Application Development & Delivery',
+      name: 'TARGE',
+      targets: 'Deliver 100% of assigned tasks within agreed sprint timeline',
+      performance: 'Deliver 100% of assigned tasks within agreed sprint timeline'
+    },
+  ];
+
+
+   currentCycles = {
     name: 'ELEVATE - Q3 (July - September 2026)',
     targets: '22 Jul - 30 Jul 2026',
     performance: '29 Sept - 7 Oct 2026'
   };
 
-  previousCycles = [
+  previousCycle = [
     {
       name: 'ELEVATE - Q3 (July-September 2026)',
       targets: '22 Jul - 30 Jul 2026',
@@ -48,16 +92,39 @@ export class Elevate {
     }
   ];
 
-  viewCycle(cycle: any) {
-    console.log('Viewing cycle:', cycle);
-  }
+ 
 
   goBack() {
-    
+    this.router.navigate(["/"])
   }
 
-  topView(){
-     this.router.navigate(["/my-active"])
+
+    isActive = false;
+
+  toggleActive() {
+    this.isActive = !this.isActive;
   }
+
+
+  // move to next step //
+nextStep() {
+  if (this.currentStep < 3) {
+    this.currentStep++;
+  }
+}
+
+
+submitTarget() {
+  this.nextStep();
+}
+
+submitSelfReview() {
+  this.nextStep();
+}
+
+submitManagerReview() {
+  this.nextStep();
+}
+
 
 }

@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule,} from "@angular/common"
+
 
 @Component({
   selector: 'app-my-active',
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './my-active.html',
   styleUrl: './my-active.scss',
 })
 export class MyActive implements OnInit{
 
-      activeTab = 'elevate';
+      activeTab = 'target';
+      isActiveTab = 'target';
       currentStep = 1;
+      message = ""
 
 
       constructor(private router: Router){}
@@ -20,8 +25,14 @@ export class MyActive implements OnInit{
         
       }
 
+      // first toggle //
   setTab(tab: string) {
     this.activeTab = tab;
+  }
+
+  //  second toggle //
+  tabActive(tab: string){
+    this.isActiveTab = tab
   }
 
 

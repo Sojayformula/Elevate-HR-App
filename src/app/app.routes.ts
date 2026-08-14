@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { Pagelayout } from './elevate/user/userpagelayout/pagelayout';
-import { Dashboard } from './elevate/user/dashboard/dashboard';
+import { Pagelayout } from './elevate/pagelayout/pagelayout';
+import { Dashboard } from './elevate/dashboard/dashboard';
 import { Elevate } from './elevate/elevate/elevate';
-import { MyActive } from './elevate/user/my-active/my-active';
+import { MyActive } from './elevate/my-active/my-active';
 
 export const routes: Routes = [
 
