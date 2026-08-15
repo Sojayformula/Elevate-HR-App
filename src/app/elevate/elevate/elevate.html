@@ -283,45 +283,42 @@
       <!-- toggle buttons -->
       <div class="text-[14px] border py-1 rounded-[8px] overflow-auto ">
         <div class="flex items-center gap-2 md:gap-15 md:px-10 whitespace-nowrap">
-         <button 
-         (click)="setStep(1)"
+         <button
+         type="button" 
          (click)="tabActive('target')"
-         [class.bg-blue-500]="activeTab === 'target'"
-         [class.text-white]="activeTab === 'target'"
-         [class.text-gray-500]="activeTab !== 'target'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1">
+         [class.bg-blue-500]="currentStep === 1"
+         [class.text-white]="currentStep === 1"
+         [class.text-gray-500]="currentStep !== 1"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition">
           Targets
          </button>
 
          <button
-         (click)="setStep(2)"
          (click)="tabActive('self-review')"
-         [class.bg-blue-500]="activeTab === 'self-review'"
-         [class.text-white]="activeTab === 'self-review'"
-         [class.text-gray-500]="activeTab !== 'self-review'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1"
+         [class.bg-blue-500]="isActiveTab === 'self-review'"
+         [class.text-white]="isActiveTab === 'self-review'"
+         [class.text-gray-500]="isActiveTab !== 'self-review'"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition"
          >
           Self-review
         </button>
 
          <button
-         (click)="setStep(3)"
          (click)="tabActive('manager-review')"
-         [class.bg-blue-500]="activeTab === 'manager-review'"
-         [class.text-white]="activeTab === 'manager-review'"
-         [class.text-gray-500]="activeTab !== 'manager-review'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1"
+         [class.bg-blue-500]="isActiveTab === 'manager-review'"
+         [class.text-white]="isActiveTab === 'manager-review'"
+         [class.text-gray-500]="isActiveTab !== 'manager-review'"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition"
          >
           Manager Review
         </button>
 
          <button
-         (click)="setStep(4)"
          (click)="tabActive('complete')"
-         [class.bg-green-500]="activeTab === 'complete'"
-         [class.text-white]="activeTab === 'complete'"
-         [class.text-gray-500]="activeTab !== 'complete'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1"
+         [class.bg-green-500]="isActiveTab === 'complete'"
+         [class.text-white]="isActiveTab === 'complete'"
+         [class.text-gray-500]="isActiveTab !== 'complete'"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition"
          >
           Complete
         </button>
@@ -571,7 +568,7 @@
          [class.bg-blue-500]="isActiveTab === 'target'"
          [class.text-white]="isActiveTab === 'target'"
          [class.text-gray-500]="isActiveTab !== 'target'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1">
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition">
           Targets
          </button>
 
@@ -580,7 +577,7 @@
          [class.bg-blue-500]="isActiveTab === 'self-review'"
          [class.text-white]="isActiveTab === 'self-review'"
          [class.text-gray-500]="isActiveTab !== 'self-review'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition"
          >
           Self-review
         </button>
@@ -590,7 +587,7 @@
          [class.bg-blue-500]="isActiveTab === 'manager-review'"
          [class.text-white]="isActiveTab === 'manager-review'"
          [class.text-gray-500]="isActiveTab !== 'manager-review'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition"
          >
           Manager Review
         </button>
@@ -600,7 +597,7 @@
          [class.bg-green-500]="isActiveTab === 'complete'"
          [class.text-white]="isActiveTab === 'complete'"
          [class.text-gray-500]="isActiveTab !== 'complete'"
-         class="cursor-pointer px-3 h-6 rounded-[6px] flex-1"
+         class="cursor-pointer px-3 h-6 rounded-[6px] transition"
          >
           Complete
         </button>
@@ -754,18 +751,18 @@
                   <div class="flex items-center gap-2 md:gap-15 md:px-10 whitespace-nowrap">
                   <button 
                   (click)="tabActive('target')"
-                  [class.bg-blue-500]="activeTab === 'target'"
-                  [class.text-white]="activeTab === 'target'"
-                  [class.text-gray-500]="activeTab !== 'target'"
+                  [class.bg-blue-500]="isActiveTab === 'target'"
+                  [class.text-white]="isActiveTab === 'target'"
+                  [class.text-gray-500]="isActiveTab !== 'target'"
                   class="cursor-pointer px-3 h-6 rounded-[6px] flex-1">
                     Targets
                   </button>
 
                   <button
                   (click)="tabActive('self-review')"
-                  [class.bg-blue-500]="activeTab === 'self-review'"
-                  [class.text-white]="activeTab === 'self-review'"
-                  [class.text-gray-500]="activeTab !== 'self-review'"
+                  [class.bg-blue-500]="isActiveTab === 'self-review'"
+                  [class.text-white]="isActiveTab === 'self-review'"
+                  [class.text-gray-500]="isActiveTab !== 'self-review'"
                   class="cursor-pointer px-2 h-6 rounded-[6px] flex-1"
                   >
                     Self-review
@@ -773,9 +770,9 @@
 
                   <button
                   (click)="tabActive('manager-review')"
-                  [class.bg-blue-500]="activeTab === 'manager-review'"
-                  [class.text-white]="activeTab === 'manager-review'"
-                  [class.text-gray-500]="activeTab !== 'manager-review'"
+                  [class.bg-blue-500]="isActiveTab === 'manager-review'"
+                  [class.text-white]="isActiveTab === 'manager-review'"
+                  [class.text-gray-500]="isActiveTab !== 'manager-review'"
                   class="cursor-pointer px-2 h-6 rounded-[6px] flex-1"
                   >
                     Manager Review
@@ -783,9 +780,9 @@
 
                   <button
                   (click)="tabActive('complete')"
-                  [class.bg-green-500]="activeTab === 'complete'"
-                  [class.text-white]="activeTab === 'complete'"
-                  [class.text-gray-500]="activeTab !== 'complete'"
+                  [class.bg-green-500]="isActiveTab === 'complete'"
+                  [class.text-white]="isActiveTab === 'complete'"
+                  [class.text-gray-500]="isActiveTab !== 'complete'"
                   class="cursor-pointer px-2 h-6 rounded-[6px] flex-1"
                   >
                     Complete
@@ -1387,9 +1384,9 @@
             <button
               type="button"
               (click)="tabActive('target')"
-              [class.bg-blue-500]="activeTab === 'target'"
-              [class.text-white]="activeTab === 'target'"
-              [class.text-gray-500]="activeTab !== 'target'"
+              [class.bg-blue-500]="isActiveTab === 'target'"
+              [class.text-white]="isActiveTab === 'target'"
+              [class.text-gray-500]="isActiveTab !== 'target'"
               class="cursor-pointer px-4 h-7 rounded-[6px] transition"
             >
               Targets
@@ -1400,9 +1397,9 @@
             <button
               type="button"
               (click)="tabActive('self-review')"
-              [class.bg-blue-500]="activeTab === 'self-review'"
-              [class.text-white]="activeTab === 'self-review'"
-              [class.text-gray-500]="activeTab !== 'self-review'"
+              [class.bg-blue-500]="isActiveTab === 'self-review'"
+              [class.text-white]="isActiveTab === 'self-review'"
+              [class.text-gray-500]="isActiveTab !== 'self-review'"
               class="cursor-pointer px-4 h-7 rounded-[6px] transition"
             >
               Self-review
@@ -1413,9 +1410,9 @@
             <button
               type="button"
               (click)="tabActive('manager-review')"
-              [class.bg-blue-500]="activeTab === 'manager-review'"
-              [class.text-white]="activeTab === 'manager-review'"
-              [class.text-gray-500]="activeTab !== 'manager-review'"
+              [class.bg-blue-500]="isActiveTab === 'manager-review'"
+              [class.text-white]="isActiveTab === 'manager-review'"
+              [class.text-gray-500]="isActiveTab !== 'manager-review'"
               class="cursor-pointer px-4 h-7 rounded-[6px] transition"
             >
               Manager Review
@@ -1426,9 +1423,9 @@
             <button
               type="button"
               (click)="tabActive('complete')"
-              [class.bg-green-500]="activeTab === 'complete'"
-              [class.text-white]="activeTab === 'complete'"
-              [class.text-gray-500]="activeTab !== 'complete'"
+              [class.bg-green-500]="isActiveTab === 'complete'"
+              [class.text-white]="isActiveTab === 'complete'"
+              [class.text-gray-500]="isActiveTab !== 'complete'"
               class="cursor-pointer px-4 h-7 rounded-[6px] transition"
             >
               Complete

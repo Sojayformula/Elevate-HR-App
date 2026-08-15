@@ -14,7 +14,7 @@ export class Elevate {
 
      activeTab = 'target';
       isActiveTab = 'target';
-      currentStep = 1;
+      currentStep: number = 1;
       totalStep = 4
       message = ""
       coments = ""
@@ -41,6 +41,7 @@ export class Elevate {
 
 
 tabActive(tab: string) {
+   console.log('CLICKED:', tab);
   this.isActiveTab = tab;
 
   switch (tab) {
@@ -60,7 +61,11 @@ tabActive(tab: string) {
       this.currentStep = 4;
       break;
   }
+  console.log('ACTIVE:', this.isActiveTab);
 }
+
+
+
 
 
    // ELEVATE //
