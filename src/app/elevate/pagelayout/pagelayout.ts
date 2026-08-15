@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router'; 
+import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router'; 
 
 @Component({
   selector: 'app-pagelayout',
-  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './pagelayout.html',
   styleUrl: './pagelayout.scss',
 })

@@ -27,16 +27,40 @@ export class Elevate {
         
       }
 
-          // first toggle //
-  setTab(tab: string) {
-    this.activeTab = tab;
-  }
+         
+  // setTab(tab: string) {
+  //   this.activeTab = tab;
+  // }
   
 
-  //  second toggle //
-  tabActive(tab: string){
-    this.isActiveTab = tab
+  // tabActive(tab: string){
+  //   this.isActiveTab = tab
+  // }
+
+
+
+
+tabActive(tab: string) {
+  this.isActiveTab = tab;
+
+  switch (tab) {
+    case 'target':
+      this.currentStep = 1;
+      break;
+
+    case 'self-review':
+      this.currentStep = 2;
+      break;
+
+    case 'manager-review':
+      this.currentStep = 3;
+      break;
+
+    case 'complete':
+      this.currentStep = 4;
+      break;
   }
+}
 
 
    // ELEVATE //
