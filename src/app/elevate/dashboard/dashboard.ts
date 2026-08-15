@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,9 +12,12 @@ export class Dashboard {
   
      activeTab = 'elevate';
 
+     constructor(private router: Router){}
+
   setTab(tab: string) {
     this.activeTab = tab;
   }
+
 
 
 }

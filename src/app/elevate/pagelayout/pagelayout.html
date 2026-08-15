@@ -1,58 +1,52 @@
- <main class="flex justify-between border-b border-gray-200 overflow-x-auto">
+ <main class="border-b border-gray-200 overflow-x-auto bg-white fixed w-full">
 
-    <div class="flex gap-10 h-[65px] bg-white flex items-center px-8">
+  <div class="flex justify-between md:mx-20">
+
+    <!-- <div class="flex gap-10 h-[65px] bg- white flex items-center px-8 w- full "> -->
     <!-- Logo -->
-    <div class="w-9 h-9 flex items-center justify-center text-[#bd202e] text-[32px] font-bold font-serif mr-7">
+    <div class="w-9 flex items-center justify-center text-[#bd202e] text-[32px] font-bold font-serif  ">
        e
     </div>
 
-<!-- Router -->
-<div>
-<a routerLink="dashboard"
- routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
- class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
-Dashboard
-</a>
+      <!-- Router -->
+      <div class="flex items-center">
+      <a routerLink="dashboard"
+      routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
+      [routerLinkActiveOptions]="{exact: false}"
+      class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      Dashboard
+      </a>
 
 
-<a
-  routerLink="elevate"
-  routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
-  class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition"
->
-  Elevate
-</a>
+      <a routerLink="elevate"
+        routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
+        [routerLinkActiveOptions]="{exact: false}"
+        class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition"
+      >
+        Elevate
+      </a>
 
-<a routerLink="my-active"
- routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
-   class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
-My Active
-</a>
+      <a routerLink="my-active"
+      routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
+      [routerLinkActiveOptions]="{exact: false}"
+        class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      My Active
+      </a>
 
-</div> 
+      </div> 
 
-</div>
+      <!-- </div> -->
   
 
 
 
 
      <!-- header -->
-<div>
-<header class="h-[65px] bg-white flex items-center px-8">
-
-
-
-
-  
-
-
-
-
+<!-- <div class="h-[65px] bg-white flex items-center px-8"> -->
 
 
     <!-- User -->
-    <div class="ml-auto flex items-center gap-3">
+    <div class=" flex items-center gap-3   h-[65px] ">
 
       <div class="flex flex-col text-right">
 
@@ -73,11 +67,12 @@ My Active
 
     </div>
 
-  </header>
+
   </div>
 
-    </main>
+</main>
 
-    <div class="bg-[#f6f7f9] h-screen">
+
+    <div class="bg-[#f6f7f9] h-screen py-20">
     <router-outlet></router-outlet>
     </div>

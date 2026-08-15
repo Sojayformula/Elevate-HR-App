@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-elevate',
+  selector: 'app-performance',
   imports: [FormsModule, CommonModule],
-  templateUrl: './elevate.html',
-  styleUrl: './elevate.scss',
+  templateUrl: './performance.html',
+  styleUrl: './performance.scss',
 })
-export class Elevate {
+export class Performance {
 
 
-     activeTab = 'target';
+
+    activeTab = 'target';
       isActiveTab = 'target';
       currentStep = 1;
-      totalStep = 4
       message = ""
-      coments = ""
 
 
       constructor(private router: Router){}
@@ -27,11 +26,10 @@ export class Elevate {
         
       }
 
-          // first toggle //
+      // first toggle //
   setTab(tab: string) {
     this.activeTab = tab;
   }
-  
 
   //  second toggle //
   tabActive(tab: string){
@@ -111,21 +109,10 @@ export class Elevate {
 
   // move to next step //
 nextStep() {
-  if (this.currentStep < this.totalStep) {
+  if (this.currentStep < 3) {
     this.currentStep++;
   }
 }
-
-previous() {
-  if (this.currentStep > this.totalStep) {
-    this.currentStep--;
-  }
-}
-
-    // first toggle //
-  setStep(tab: any) {
-    this.activeTab = tab;
-  }
 
 
 submitTarget() {
@@ -139,6 +126,7 @@ submitSelfReview() {
 submitManagerReview() {
   this.nextStep();
 }
+
 
 
 }

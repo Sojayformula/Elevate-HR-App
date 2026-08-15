@@ -1,0 +1,238 @@
+
+<!-- <div class=" min-h-screen bg-[#f7f8fa] text-[#202124]"> -->
+
+  <main class=" mx-20 px-5 sm:px-8 py-8 overflow-auto">
+
+
+    <!-- Back -->
+    <button
+      (click)="goBack()"
+      class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition mb-7">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="m15 18-6-6 6-6"/>
+      </svg>
+
+      <span>Elevate</span>
+    </button>
+
+
+
+    <!-- Page title -->
+    <div class="mb-8">
+
+      <h1 class="text-xl font-semibold text-gray-900">
+        My Activities
+      </h1>
+
+      <p class="text-sm text-gray-500 mt-2">
+        Current and previous performance cycles.
+      </p>
+
+    </div>
+    
+
+    
+    <section class="mb-9">
+
+      <!-- Section heading -->
+      <div class="flex items-center gap-3 mb-4">
+
+        <h2
+          class="text-xs font-semibold tracking-wide text-gray-700 uppercase"
+        >
+          Current
+        </h2>
+
+        <span
+          class="px-3 py-1 rounded-full bg-[#dff7e8] text-[#22a05a] text-[11px] font-medium"
+        >
+          Active
+        </span>
+
+      </div>
+
+
+      <!-- Current activity card -->
+      <div
+        class="bg-blue-50 [#e5f4ff] border border-[#8bbce3] rounded-xl px-5 py-5 shadow-lg">
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-5 items-center"
+        >
+
+          <!-- Cycle -->
+          <div>
+            <p class="text-sm font-semibold text-gray-800">
+              {{ currentCycles.name }}
+            </p>
+          </div>
+
+
+          <!-- Targets -->
+          <div>
+            <p
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1">
+              Goals
+            </p>
+
+            <p class="text-xs text-gray-700">
+              {{ currentCycles.targets }}
+            </p>
+          </div>
+
+
+          <!-- Performance -->
+          <div>
+            <p
+              class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1"
+            >
+              Performance
+            </p>
+
+            <p class="text-xs text-gray-700">
+              {{ currentCycles.performance }}
+            </p>
+          </div>
+
+
+          <!-- View -->
+          <div class="md:text-right">
+
+            <button
+              (click)="myActive()"
+              class="inline-flex items-center justify-center gap-2 bg-[#3287d7] hover:bg-[#2778c4] text-white text-xs font-medium px-5 py-2.5 rounded-md transition duration-200">
+              View
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14"/>
+                <path d="m13 6 6 6-6 6"/>
+              </svg>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PREVIOUS CYCLES  -->
+    <section>
+
+      <!-- Heading -->
+      <div class="flex items-center gap-3 mb-4">
+
+        <h2
+          class="text-xs font-semibold tracking-wide text-gray-700 uppercase"
+        >
+          Previous Cycles
+        </h2>
+
+        <span
+          class="px-3 py-1 rounded-full bg-gray-100 text-gray-500 text-[11px] font-medium"
+        >
+          Completed
+        </span>
+
+      <!-- </div> -->
+
+
+      <!-- Table -->
+      <div
+        class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg"
+      >
+
+        @for (cycle of previousCycle; track $index) {
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 items-center gap-4 px-5 py-5 border-b-2 border-gray-200 last:border-b-0 hover:bg-gray-50 transition">
+
+            <!-- Cycle name -->
+            <div>
+              <p class="text-sm font-medium text-gray-800">
+                {{ cycle.name }}
+              </p>
+            </div>
+
+
+            <!-- Targets -->
+            <div>
+              <p
+                class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1"
+              >
+                Targets
+              </p>
+
+              <p class="text-xs text-gray-600">
+                {{ cycle.targets }}
+              </p>
+            </div>
+
+
+            <!-- Performance -->
+            <div>
+              <p
+                class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold mb-1">
+                Performance
+              </p>
+
+              <p class="text-xs text-gray-600">
+                {{ cycle.performance }}
+              </p>
+            </div>
+
+
+            <!-- View -->
+            <div class="md:text-right">
+
+              <button
+                class="inline-flex items-center gap-2 text-xs font-medium text-gray-700 hover:text-[#3287d7] transition">
+                View
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14"/>
+                  <path d="m13 6 6 6-6 6"/>
+                </svg>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    <!-- </section> -->
+
+  <!-- </main> -->
+
+</div>

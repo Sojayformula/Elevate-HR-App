@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule,} from "@angular/common"
 
 
 @Component({
   selector: 'app-my-active',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterOutlet],
   templateUrl: './my-active.html',
   styleUrl: './my-active.scss',
 })
@@ -124,6 +124,11 @@ submitSelfReview() {
 
 submitManagerReview() {
   this.nextStep();
+}
+
+
+myActive(){
+this.router.navigate(["/performance"])
 }
 
 }
