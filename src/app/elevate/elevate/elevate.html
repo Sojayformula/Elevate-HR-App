@@ -68,8 +68,8 @@
             </span>
 
             <span
-              [class.text-gray-700]="currentStep >= 1"
-              [class.border-gray-200]="currentStep < 1"
+              [class.text-blue-700]="currentStep >= 1"
+              [class.text-gray-200]="currentStep < 1"
               [class.border]="currentStep < 1"
             >
               Target Preview
@@ -79,9 +79,12 @@
 
 
           <!-- LINE -->
-          <div class="w-14 sm:w-20 md:w-40 h-px bg-gray-200 ">
+          <hr 
+          [class.border-blue-500]="currentStep >= 1"
+          [class.border-gray-500]="currentStep < 1"
+          class="w-14 sm:w-20 md:w-40 h-px bg-gray-200 border-2">
            
-          </div>
+          <!-- </div> -->
 
 
           <!-- SELF REVIEW -->
