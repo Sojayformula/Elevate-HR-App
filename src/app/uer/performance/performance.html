@@ -1,9 +1,9 @@
 
-<main class="mx-20">
+<main class="md:mx-20 overflow-auto">
 
      <!-- Back -->
       <section>
-        <div >
+        <div>
           <div>
           <button
             (click)="goBack()"
@@ -57,14 +57,14 @@
 
       <!-- PROGRESS SECTION -->
   <section>
-  <div class="sm:mx- 8 md:mx- 20 mt-9 w-full">
+  <div class="mt-9 w-full overflow-auto">
 
     <div class="bg-white border border-gray-300 rounded-xl">
 
       <!-- STEPS -->
-      <div class="px-5  md:px-20 py-7 ">
+      <div class="px-5  md:px-20 py-7 overflow-auto">
 
-        <div class="flex items-center min-w-max">
+        <div class="flex items-center">
 
           <!-- TARGETS -->
           <div class="flex items-center gap-2 text-base md:text-sm text-gray-900 whitespace-nowrap">
@@ -167,7 +167,7 @@
         <!-- PREVIEW BUTTON -->
         <button
           type="button"
-          class="w- fit bg-green-200 text-green-600 px-4 py-0.5 border border-gray-400 rounded-[10px] text-sm md:text-[12px] font-bold hover:bg-gray-300 transition">
+          class="w-fit bg-green-200 text-green-600 px-4 py-0.5 border border-gray-400 rounded-[10px] text-sm md:text-[12px] font-bold hover:bg-gray-300 transition">
           Preview targets
         </button>
 
@@ -283,7 +283,7 @@
       name="message"
       placeholder=""
       placeholder=". I delivered 100% of assigned tasks within agreed sprint timelines."
-       class="border w-full px-4 py-12 h-30 rounded-[10px]"
+       class="border w-full px-4 py-12 md:h-30 rounded-[10px]"
 
       >
       </textarea>
@@ -292,7 +292,7 @@
 
 
       <div class="mb-10 mt-10">
-      <div class="flex gap-2 relative translate-y-10 px-4">
+      <div class="flex gap-2 relative translate-y-13 md:translate-y-10 px-4 z-50">
       <svg xmlns="http://www.w3.org/2000/svg" 
       width="24" 
       height="24" 
@@ -307,8 +307,8 @@
       <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/>
     </svg>
 
-        <p class="text-blue-500"> MANAGERS COMMENTS</p>
-        <p class="relative left-4"> Manager rating: 4/5</p>
+        <p class="text-blue-500 whitespace-nowrap"> MANAGERS COMMENTS</p>
+        <p class="relative left-4 text-sm"> Manager rating: 4/5</p>
       </div>
 
       <textarea
@@ -316,7 +316,7 @@
       name="message"
       placeholder=""
       placeholder="Execute work done!"
-       class="border w-full px-4 py-12 h-30 rounded-[10px]"
+       class="border w-full px-4 py-15 md:py-12 h-30 rounded-[10px]"
 
       >
       </textarea>
@@ -360,7 +360,7 @@
       </div>
 
 
-        <div class="flex justify-between border mt-10 bg-white px-4 h-[7rem] rounded-[10px]">
+        <div class="flex justify-between border mt-10 mb-10 bg-white px-4 h-[7rem] rounded-[10px]">
       <div>
         <p class="font-bold mt-4">Learning & Development</p>
         <p class="py-3">Weight 15%</p>
