@@ -1,14 +1,17 @@
 
-        <div class="text-[#171717]">
+  <div class="text-[#171717]">
+
+
+    <button (click)="manger()" class="mx-10">GO</button>
 
   <!-- MAIN -->
 
   <main
-    class="w- mx-20 pt-14 ">
+    class="mx-2 md:mx-20 pt-14 ">
 
     <!-- Page Header -->
     <div
-      class="flex items-center justify-between mb-7">
+      class="md:flex items-center md:justify-between mb-7">
 
       <div>
 
@@ -27,7 +30,7 @@
       <!-- My Activities -->
       <button
         (click)="setTab('activities')"
-        class="flex items-center gap-2 px-4 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm hover:bg-gray-50 transition">
+        class="flex items-center gap-2 px-4 mt-4 md:mt-0 md:py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm hover:bg-gray-50 transition">
 
         <span class="text-lg">
           ☷
@@ -102,7 +105,7 @@
         <!-- PROGRESS -->
 
         <div
-          class="min-h-[68px] border-t border-b border-gray-200 px-11 flex items-center gap-3">
+          class="min-h- [68px] border-t border-b border-gray-200 px-11 py-2 flex items-center gap-3 overflow-auto">
 
           <!-- Targets -->
 
@@ -144,9 +147,9 @@
 
           <!-- Line -->
 
-          <div
-            class="h-px bg-gray-200 flex-1 min-w-[45px]"
-          ></div>
+          <div class="h-px bg-gray-200 flex-1 min-w-[45px]" >
+
+          </div>
 
 
 
@@ -195,7 +198,7 @@
         <!-- DATE WINDOWS -->
 
         <div
-          class="flex items-center gap-6 px-7 py-6">
+          class="md:flex items-center gap-6 px-7 py-6">
 
           <!-- Target Setting -->
 

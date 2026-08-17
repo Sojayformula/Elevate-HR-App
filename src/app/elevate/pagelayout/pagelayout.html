@@ -1,4 +1,65 @@
- <main class="border-b border-gray-200 overflow-x-auto bg-white fixed w-full">
+ <main (click)="closeMenu()" class="border-b border-gray-200 overflow-x-auto bg-white fixed w-full">
+
+
+<div>
+  <!-- Humburger button -->
+   <div class="md:hidden mt-5 fixed left-35">
+        <button (click)="$event.stopPropagation(); toggleMenu() ">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+          width="24" height="24" viewBox="0 0 24 24" 
+          fill="none" stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          class="lucide lucide-list-icon lucide-list">
+          <path d="M3 5h.01"/><path d="M3 12h.01"/>
+          <path d="M3 19h.01"/><path d="M8 5h13"/>
+          <path d="M8 12h13"/>
+          <path d="M8 19h13"/>
+        </svg>
+        </button>
+        </div>
+
+    @if( isMenuOpen ){
+
+      <!-- <div class="text-white fixed"> -->
+
+         <!-- Router --> 
+      <div  class="flex left-35 mt-12 py-8 px-6  rounded-[8px] border bg-white w-30 h-[10rem] fixed shadow-xl">
+        <ul>
+          <li>
+      <a routerLink="dashboard"
+      (click)="closeMenu()"
+      class=" rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      Dashboard
+      </a>
+      </li>
+
+
+      <li>
+      <a routerLink="elevate"
+      (click)="closeMenu()"
+        class="rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition"
+      >
+        Elevate
+      </a>
+      </li>
+
+      <li>
+      <a routerLink="my-active"
+      (click)="closeMenu()"
+        class="rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      My Active
+      </a>
+      </li>
+      </ul>
+
+      </div> 
+      <!-- </div> -->
+    }
+    </div>
+
+
 
   <div class="flex justify-between md:mx-20">
 
@@ -9,7 +70,7 @@
     </div>
 
       <!-- Router -->
-      <div class="flex items-center">
+      <div class="flex items-center md:block hidden ">
       <a routerLink="dashboard"
       routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
       [routerLinkActiveOptions]="{exact: false}"
@@ -34,15 +95,6 @@
       </a>
 
       </div> 
-
-      <!-- </div> -->
-  
-
-
-
-
-     <!-- header -->
-<!-- <div class="h-[65px] bg-white flex items-center px-8"> -->
 
 
     <!-- User -->
@@ -73,6 +125,6 @@
 </main>
 
 
-    <div class="bg-[#f6f7f9] h-screen py-20">
+    <div (click)="closeMenu()" class="bg-[#f6f7f9] h-screen py-20">
     <router-outlet></router-outlet>
     </div>

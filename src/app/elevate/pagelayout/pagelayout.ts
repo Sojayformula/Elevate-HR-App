@@ -11,6 +11,16 @@ export class Pagelayout {
 
 
   activeTab = 'elevate';
+  isMenuOpen = false
+
+  // Humburger menu //
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen
+  }
+
+  closeMenu(){
+    this.isMenuOpen = false
+  }
 
   setTab(tab: string) {
     this.activeTab = tab;
