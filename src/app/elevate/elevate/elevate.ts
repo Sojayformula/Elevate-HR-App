@@ -28,14 +28,10 @@ export class Elevate {
       }
 
          
-  // setTab(tab: string) {
-  //   this.activeTab = tab;
-  // }
-  
-
-  // tabActive(tab: string){
-  //   this.isActiveTab = tab
-  // }
+    
+      myactivities(){
+        this.router.navigate(["/my-active"])
+      }
 
 
 
@@ -125,9 +121,13 @@ tabActive(tab: string) {
 
  
 
-  goBack() {
-    this.router.navigate(["/"])
+  goToElevate() {
+    this.router.navigate(["/elevate"])
   }
+
+  //   goToMyActivity() {
+  //   this.router.navigate(["/my-activities"])
+  // }
 
 
     isActive = false;

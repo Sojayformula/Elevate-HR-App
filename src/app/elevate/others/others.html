@@ -1,78 +1,75 @@
-<div class="flex items-center justify-center w-full">
-
-  <!-- TARGET PREVIEW -->
-  <div
-    class="flex items-center gap-2 text-base md:text-sm whitespace-nowrap"
-    [class.bg-red-500]="currentStep >= 1"
-    [class.bg-gray-400]="currentStep < 1"
-    [class.text-white]="currentStep >= 1"
-    [class.text-gray-400]="currentStep < 1">
-    
-
-    <span
-      class="w-6 h-6 md:w-5 md:h-5 rounded-full flex items-center justify-center text-xs md:text-[10px]"
-      [class.bg-blue-500]="currentStep >= 1"
-      [class.text-white]="currentStep >= 1"
-      [class.border-gray-200]="currentStep < 1"
-      [class.border]="currentStep < 1">
-      1
-    </span>
-
-    <span>Target Preview</span>
-  </div>
+<!-- <a  (click)="openStaffPage()" class="cursor-pointer">
+  Staff
+</a> -->
 
 
-  <!-- LINE -->
-  <div
-    class="w-14 sm:w-20 md:w-40 h-px mx-3"
-    [class.bg-blue-500]="currentStep >= 2"
-    [class.bg-gray-200]="currentStep < 2">
-  </div>
 
+<nz-steps
+  [nzCurrent]="currentStep()"
+  nzProgressDot
+>
+  <nz-step
+    nzTitle="Account"
+    nzDescription="Create your account"
+  />
 
-  <!-- SELF REVIEW -->
-  <div
-    class="flex items-center gap-2 text-base md:text-sm whitespace-nowrap"
-    [class.text-gray-900]="currentStep >= 2"
-    [class.text-gray-400]="currentStep < 2">
+  <nz-step
+    nzTitle="Address"
+    nzDescription="Enter your address"
+  />
 
-    <span
-      class="w-6 h-6 md:w-5 md:h-5 rounded-full flex items-center justify-center text-xs md:text-[10px]"
-      [class.bg-blue-500]="currentStep >= 2"
-      [class.text-white]="currentStep >= 2"
-      [class.border]="currentStep < 2"
-      [class.border-gray-200]="currentStep < 2">
-      2
-    </span>
+  <nz-step
+    nzTitle="Payment"
+    nzDescription="Choose payment method"
+  />
 
-    <span>Self-Review</span>
-  </div>
+  <nz-step
+    nzTitle="Complete"
+    nzDescription="Order completed"
+  />
+</nz-steps>
 
+<div class="step-content">
 
-  <!-- LINE -->
-  <div
-    class="w-14 sm:w-20 md:w-40 h-px mx-3"
-    [class.bg-blue-500]="currentStep >= 3"
-    [class.bg-gray-200]="currentStep < 3">
-  </div>
+  @if (currentStep() === 0) {
+    <h2>Account</h2>
+    <p>Create your account.</p>
+  }
 
+  @if (currentStep() === 1) {
+    <h2>Address</h2>
+    <p>Enter your delivery address.</p>
+  }
 
-  <!-- MANAGER REVIEW -->
-  <div
-    class="flex items-center gap-2 text-base md:text-sm whitespace-nowrap"
-    [class.text-gray-900]="currentStep >= 3"
-    [class.text-gray-400]="currentStep < 3">
+  @if (currentStep() === 2) {
+    <h2>Payment</h2>
+    <p>Choose your payment method.</p>
+  }
 
-    <span
-      class="w-6 h-6 md:w-5 md:h-5 rounded-full flex items-center justify-center text-xs md:text-[10px]"
-      [class.bg-blue-500]="currentStep >= 3"
-      [class.text-white]="currentStep >= 3"
-      [class.border]="currentStep < 3"
-      [class.border-gray-200]="currentStep < 3">
-      3
-    </span>
+  @if (currentStep() === 3) {
+    <h2>Complete</h2>
+    <p>Your order has been completed.</p>
+  }
 
-    <span>Manager Review</span>
-  </div>
+</div>
+
+<div class="actions">
+
+  <button
+    nz-button
+    [disabled]="currentStep() === 0"
+    (click)="previous()"
+  >
+    Previous
+  </button>
+
+  <button
+    nz-button
+    nzType="primary"
+    [disabled]="currentStep() === 3"
+    (click)="next()"
+  >
+    Next
+  </button>
 
 </div>

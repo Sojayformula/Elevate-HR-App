@@ -18,8 +18,17 @@ export class Dashboard {
      this.router.navigate(["/manager"])
      }
 
-  setTab(tab: string) {
-    this.activeTab = tab;
+  // setTab(tab: string) {
+  //   this.activeTab = tab;
+  // }
+
+  goToElevevat(){
+    this.router.navigate(["/elevate"])
+  }
+
+
+  goToMyActivities(){
+    this.router.navigate(["/my-active"])
   }
 
 

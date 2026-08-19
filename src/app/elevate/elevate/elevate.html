@@ -1,17 +1,10 @@
 
- <!-- ACTIVITIES -->
 
- @if (currentStep === 1) {
-
-<main class="text-[#171717] overflow-x-auto">
-
-  <!-- PAGE HEADER -->
-  <header class="pt-6">
-
-    <!-- Back button -->
+<!-- Back button -->
     <button
+    (click)="myactivities()"
       type="button"
-      class="mx-5 md:mx-20 flex items-center gap-2 text-sm md:text-[13px] font-bold cursor-pointer hover:text-[#3f91df] transition">
+      class="mx-5 md:mx-20 mt-10 flex items-center gap-2 text-sm md:text-[13px] font-bold cursor-pointer hover:text-[#3f91df] transition">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="21"
@@ -30,6 +23,13 @@
       <span>My Activities</span>
     </button>
 
+
+ @if (currentStep === 1) {
+
+<main class="text-[#171717] overflow-x-auto">
+
+  <!-- PAGE HEADER -->
+  <header class="pt-6">
 
     <!-- PAGE TITLE -->
     <div class="mx-5 sm:mx-8 md:mx-20 mt-9">
@@ -344,29 +344,6 @@
  @if (currentStep === 2) {
 
   <header class="pt-6">
-
-    <!-- Back button -->
-    <button
-      type="button"
-      class="mx-5 sm:mx-8 md:mx-20 flex items-center gap-2 text-sm md:text-[13px] font-bold cursor-pointer hover:text-[#3f91df] transition">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="21"
-        height="21"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="m12 19-7-7 7-7" />
-        <path d="M19 12H5" />
-      </svg>
-
-      <span>My Activities</span>
-    </button>
-
 
     <!-- PAGE TITLE -->
     <div class="mx-5 sm:mx-8 md:mx-20 mt-9">
@@ -719,7 +696,7 @@
       [(ngModel)]="message"
       name="message"
       placeholder="Describe what you delivered against this KPI."
-       class="border w-full px-4 h-30 rounded-[10px]"
+       class="border w-full px-4 h-30 rounded-[10px] focus focus:border-blue-500 focusoutline-none "
       >
       </textarea>
     </div>
@@ -730,7 +707,19 @@
         <div>
       <button 
       class="flex gap-2 items-center mt-5 px-8 w-[12rem]  mx-6 rounded-[8px] border-b shadow-sm py-2 ">
-        <p>SA</p>
+        <svg xmlns="http://www.w3.org/2000/svg" 
+        width="20" height="24" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        class="lucide lucide-save-icon lucide-save">
+        <path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+        <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/>
+        <path d="M7 3v4a1 1 0 0 0 1 1h7"/>
+      </svg>
         <p class="cursor-pointer">
         Continue later
         </p>
@@ -740,7 +729,18 @@
         <div>
       <button 
       class="flex gap-2 items-center mt-5 px-2 w-[12rem] mx-6 rounded-[8px] border-b shadow-sm py-2 bg-blue-500">
-        <p>AR</p>
+        <svg xmlns="http://www.w3.org/2000/svg" 
+        width="20" 
+        height="20" 
+        viewBox="0 0 24 24" 
+        fill="none" stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        class="lucide lucide-send-icon lucide-send text-white">
+        <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/>
+        <path d="m21.854 2.147-10.94 10.939"/>
+      </svg>
         <p class=" text-white cursor-pointer">
         Submit Staff Review
         </p>
@@ -817,29 +817,6 @@
   <div class="mx-5 md:mx-20">
 
     <header class="pt-6">
-
-    <!-- Back button -->
-    <button
-      type="button"
-      class=" md:mx-5 flex items-center gap-2 text-sm md:text-[13px] font-bold cursor-pointer hover:text-[#3f91df] transition">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="21"
-        height="21"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="m12 19-7-7 7-7" />
-        <path d="M19 12H5" />
-      </svg>
-
-      <span>My Activities</span>
-    </button>
-
 
     <!-- PAGE TITLE -->
     <div class="mt-9">
@@ -1232,29 +1209,6 @@
     <!-- BACK + PAGE HEADER -->
 
     <section>
-
-      <!-- Back -->
-      <button
-        type="button"
-        (click)="goBack()"
-        class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition mb-7"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path d="m15 18-6-6 6-6" />
-        </svg>
-
-        <span>Elevate</span>
-      </button>
-
-
       <!-- Page title + Score -->
       <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
 

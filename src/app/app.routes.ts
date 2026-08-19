@@ -13,7 +13,8 @@ export const routes: Routes = [
 
     {path: "", component: Pagelayout,
         children:[
-    {path: "", redirectTo: "dashboard", pathMatch: "full"},
+    {path: "", redirectTo: "pagelayout", pathMatch: "full"},
+    {path: "pagelayout", component: Pagelayout},
     {path: "dashboard", component: Dashboard},
     {path: "elevate", component: Elevate},
     {path: "my-active", component: MyActive}, 

@@ -96,7 +96,7 @@ export class Performance {
  
 
   goBack() {
-    this.router.navigate(["/"])
+    this.router.navigate(["/my-active"])
   }
 
 

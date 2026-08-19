@@ -107,7 +107,7 @@
           <div class="md:text-right">
 
             <button
-              (click)="myActive()"
+              (click)="elevate()"
               class="inline-flex items-center justify-center gap-2 bg-[#3287d7] hover:bg-[#2778c4] text-white text-xs font-medium px-5 py-2.5 rounded-md transition duration-200">
               View
 
@@ -206,7 +206,8 @@
             <div class="md:text-right">
 
               <button
-                class="inline-flex items-center gap-2 text-xs font-medium text-gray-700 hover:text-[#3287d7] transition">
+               (click)="myActive()"
+                class="inline-flex items-center gap-2 text-xs font-medium text-gray-700 hover:text-[#3287d7] transition cursor-pointer">
                 View
 
                 <svg

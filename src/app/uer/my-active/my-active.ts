@@ -126,9 +126,14 @@ submitManagerReview() {
   this.nextStep();
 }
 
-
+// My activity
 myActive(){
 this.router.navigate(["/performance"])
+}
+
+// Elevate
+elevate(){
+this.router.navigate(["/elevate"])
 }
 
 }
