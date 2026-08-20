@@ -1,1 +1,312 @@
-<p>performance-cycles works!</p>
+<div class="min-h-screen bg-[#F7F8FA]">
+
+    <div class="w-full px-[30px] py-[35px]">
+
+        <!-- PAGE HEADER -->
+        <div class="flex justify-between items-center mb-[28px]">
+
+            <div class="flex flex-col gap-[6px]">
+
+                <span class="text-[28px] font-medium text-[#111827]">
+                    Performance Cycles
+                </span>
+
+                <span class="text-[15px] text-gray-400">
+                    Set the cycle window here.
+                </span>
+
+            </div>
+
+            <button
+                class="bg-[#5BA2F7] text-white px-[28px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
+                Create Cycle
+            </button>
+
+        </div>
+
+
+        <!-- CURRENT -->
+        <section>
+
+            <span class="text-[15px] text-gray-500 uppercase">
+                Current
+            </span>
+
+
+            <!-- CURRENT CYCLE CARD -->
+            <div
+                class="bg-white border border-[#E0E3E7] rounded-[14px] shadow-[0_2px_5px_rgba(0,0,0,0.12)] mt-[12px] px-[22px] py-[20px]">
+
+                <!-- TOP -->
+                <div class="flex justify-between items-start">
+
+                    <div class="flex flex-col gap-[10px]">
+
+                        <span
+                            class="w-fit bg-[#DDFBE5] text-[#16A34A] px-[12px] py-[5px] rounded-full text-[15px] font-medium">
+                            • Active
+                        </span>
+
+                        <div class="flex flex-col gap-[4px]">
+
+                            <span class="text-[18px] font-semibold text-[#111827]">
+                                ELEVATE – Q3 (July – September 2026)
+                            </span>
+
+                            <span class="text-[15px] text-gray-400">
+                                148 employees
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="bg-white border border-[#B9B9B9] text-[#333] px-[22px] py-[10px] rounded-[8px] text-[15px] font-medium flex items-center gap-[10px]">
+
+                        Edit cycle
+
+                        <span class="text-[18px]">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- WINDOWS -->
+                <div class="grid grid-cols-2 gap-[35px] mt-[22px]">
+
+                    <!-- TARGET WINDOW -->
+                    <div
+                        class="bg-[#F8F6F2] border border-[#E4DFD8] rounded-[10px] px-[25px] py-[18px]">
+
+                        <div class="flex items-start gap-[12px]">
+
+                            <i
+                                class="fa-regular fa-calendar text-gray-400 text-[17px] mt-[2px]">
+                            </i>
+
+                            <div class="flex flex-col gap-[4px]">
+
+                                <span class="text-[15px] text-gray-400 uppercase">
+                                    Target Setting Window
+                                </span>
+
+                                <span class="text-[15px] text-[#4D9BF6] font-medium">
+                                    22 Jul – 30 Jul 2026
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PERFORMANCE WINDOW -->
+                    <div
+                        class="bg-[#F8F6F2] border border-[#E4DFD8] rounded-[10px] px-[25px] py-[18px]">
+
+                        <div class="flex items-start gap-[12px]">
+
+                            <i
+                                class="fa-regular fa-calendar text-gray-400 text-[17px] mt-[2px]">
+                            </i>
+
+                            <div class="flex flex-col gap-[4px]">
+
+                                <span class="text-[15px] text-gray-400 uppercase">
+                                    Performance Review Window
+                                </span>
+
+                                <span class="text-[15px] text-[#111827] font-medium">
+                                    29 Sept – 7 Oct 2026
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WARNING -->
+                <div
+                    class="bg-[#E4F3FF] text-[#4D9BF6] rounded-[6px] px-[14px] py-[10px] mt-[18px] text-[15px]">
+
+                    Activating a new cycle will automatically close this one and lock all remaining submissions.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREVIOUS CYCLES -->
+        <section class="mt-[35px]">
+
+            <span class="text-[15px] text-gray-500 uppercase">
+                Previous Cycles
+            </span>
+
+
+            <div
+                class="bg-white border border-[#E0E3E7] rounded-[14px] overflow-hidden mt-[12px] shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+
+
+                <!-- PREVIOUS CYCLE -->
+                <div
+                    class="grid grid-cols-[2fr_1fr_1fr_1fr_100px] items-center px-[20px] py-[18px] border-b border-[#E5E7EB]">
+
+                    <!-- NAME -->
+                    <div>
+
+                        <span class="text-[15px] font-medium text-[#222]">
+                            ELEVATE – Q3 (July–September 2026)
+                        </span>
+
+                    </div>
+
+
+                    <!-- TARGETS -->
+                    <div class="flex flex-col gap-[4px]">
+
+                        <span class="text-[15px] text-gray-400 uppercase">
+                            Targets
+                        </span>
+
+                        <span class="text-[15px] text-[#333]">
+                            22 Jul – 30 Jul 2026
+                        </span>
+
+                    </div>
+
+
+                    <!-- PERFORMANCE -->
+                    <div class="flex flex-col gap-[4px]">
+
+                        <span class="text-[15px] text-gray-400 uppercase">
+                            Performance
+                        </span>
+
+                        <span class="text-[15px] text-[#333]">
+                            29 Sept – 7 Oct 2026
+                        </span>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+                    <div>
+
+                        <span
+                            class="bg-[#DDFBE5] text-[#16A34A] px-[12px] py-[6px] rounded-full text-[15px] font-medium">
+                            • Completed
+                        </span>
+
+                    </div>
+
+
+                    <!-- ACTION -->
+                    <div class="flex justify-end">
+
+                        <button
+                            class="text-[15px] text-[#333] font-medium flex items-center gap-[8px]">
+
+                            View
+
+                            <span class="text-[18px]">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREVIOUS CYCLE -->
+                <div
+                    class="grid grid-cols-[2fr_1fr_1fr_1fr_100px] items-center px-[20px] py-[18px]">
+
+                    <!-- NAME -->
+                    <div>
+
+                        <span class="text-[15px] font-medium text-[#222]">
+                            ELEVATE – Q3 (July–September 2026)
+                        </span>
+
+                    </div>
+
+
+                    <!-- TARGETS -->
+                    <div class="flex flex-col gap-[4px]">
+
+                        <span class="text-[15px] text-gray-400 uppercase">
+                            Targets
+                        </span>
+
+                        <span class="text-[15px] text-[#333]">
+                            22 Jul – 30 Jul 2026
+                        </span>
+
+                    </div>
+
+
+                    <!-- PERFORMANCE -->
+                    <div class="flex flex-col gap-[4px]">
+
+                        <span class="text-[15px] text-gray-400 uppercase">
+                            Performance
+                        </span>
+
+                        <span class="text-[15px] text-[#333]">
+                            29 Sept – 7 Oct 2026
+                        </span>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+                    <div>
+
+                        <span
+                            class="bg-[#DDFBE5] text-[#16A34A] px-[12px] py-[6px] rounded-full text-[15px] font-medium">
+                            • Completed
+                        </span>
+
+                    </div>
+
+
+                    <!-- ACTION -->
+                    <div class="flex justify-end">
+
+                        <button
+                            class="text-[15px] text-[#333] font-medium flex items-center gap-[8px]">
+
+                            View
+
+                            <span class="text-[18px]">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
