@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrevioursCycle } from './previours-cycle';
+import { PreviousCycles } from './previous-cycles';
 
-describe('PrevioursCycle', () => {
-  let component: PrevioursCycle;
-  let fixture: ComponentFixture<PrevioursCycle>;
+describe('PreviousCycles', () => {
+  let component: PreviousCycles;
+  let fixture: ComponentFixture<PreviousCycles>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrevioursCycle]
+      imports: [PreviousCycles]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrevioursCycle);
+    fixture = TestBed.createComponent(PreviousCycles);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

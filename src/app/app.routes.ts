@@ -1,18 +1,17 @@
 import { Routes } from '@angular/router';
-import { Pagelayout } from './elevate/pagelayout/pagelayout';
+import { PageLayout } from './elevate/page-layout/page-layout';
 import { Dashboard } from './elevate/dashboard/dashboard';
 import { Elevate } from './elevate/elevate/elevate';
-import { MyActivities } from './elevate/my-activitie/my-activities/my-activities';
+import { MyActivities } from './elevate/my-activities/my-activities/my-activities';
 import { Others } from './elevate/others/others';
-import { PrevioursCycle } from './elevate/my-activitie/previours-cycle/previours-cycle';
 import { DepartmentPerformance } from './elevate/executive/department-performance/department-performance';
-
+import { PreviousCycles } from './elevate/my-activities/previous-cycles/previous-cycles';
 
 
 export const routes: Routes = [
 
 
-    {path: "", component: Pagelayout,
+    {path: "", component: PageLayout,
         children:[
     {path: "", redirectTo: "dashboard", pathMatch: "full"},
     {path: "dashboard", component: Dashboard
@@ -23,7 +22,7 @@ export const routes: Routes = [
 
     {path: "elevate", component: Elevate},
     {path: "my-activities", component: MyActivities}, 
-    {path: "previours-cycle", component: PrevioursCycle},
+    {path: "previous-cycles", component: PreviousCycles},
     {path: "department-performance", component: DepartmentPerformance},
     {path: "others", component: Others},
     

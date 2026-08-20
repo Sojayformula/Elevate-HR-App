@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLinkActive, RouterLink, Router } from '@angular/router'; 
-import { AuthService } from '../../service/auth-service';
+import { AuthService } from '../../services/auth-service';
 
 @Component({
-  selector: 'app-pagelayout',
+  selector: 'app-page-layout',
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './pagelayout.html',
-  styleUrl: './pagelayout.scss',
+  templateUrl: './page-layout.html',
+  styleUrl: './page-layout.scss',
 })
-export class Pagelayout implements OnInit{
+export class PageLayout implements OnInit{
 
 
   isMenuOpen = false

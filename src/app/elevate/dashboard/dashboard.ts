@@ -22,7 +22,7 @@ export class Dashboard {
   //   this.activeTab = tab;
   // }
 
-  goToElevevat(){
+  goToElevate(){
     this.router.navigate(["/elevate"])
   }
 
