@@ -68,9 +68,7 @@
 
     <!-- <div class="flex gap-10 h-[65px] bg- white flex items-center px-8 w- full "> -->
     <!-- Logo -->
-    <div class="w-9 flex items-center justify-center text-[#bd202e] text-[32px] font-bold font-serif  ">
-       e
-    </div>
+                <img src="/etz-logo.png" alt="etz logo" class="w-[23px] " />
 
       <!-- Router -->
       <div class="flex items-center md:block hidden">
@@ -114,35 +112,40 @@
       Team Review
       </a>
     
+      <a routerLink="performance-cycles"
+        routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
+        class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      Performance Cycles
+      </a>
+
+      <a routerLink="set-kpi"
+        routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
+        class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      Set KPI
+      </a>
 
       </div> 
 
 
     <!-- User -->
-    <div class=" flex items-center gap-3   h-[65px] ">
-
+    <div class=" flex items-center gap-3 h-[65px] ">
       <div class="flex flex-col text-right">
-
         <span class="text-[13px] font-semibold">
           Sally Smith
         </span>
-
         <span class="text-[11px] text-gray-500">
           Customer Support
         </span>
-
       </div>
-
 
       <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-xs text-gray-600">
         S 
       </div>
     </div>
-
   </div>
 </main>
 
 
-    <div (click)="closeMenu()" class="bg-[#f6f7f9] h-screen py-20">
+  <div (click)="closeMenu()" class="bg-[#f6f7f9] h-screen py-20">
     <router-outlet></router-outlet>
-    </div>
+  </div>

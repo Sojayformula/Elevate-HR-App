@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-performance-cycles',
   imports: [],
@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class PerformanceCycles {
 
+  constructor(private router: Router) {}
+
+  createCycle() {
+    this.router.navigate(['/performance-cycles/create-cycle']);
+  }
+
+  editCycle(){
+    this.router.navigate(['/performance-cycles/edit-cycle']);
+  }
+
 }
+
+
