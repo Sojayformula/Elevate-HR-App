@@ -1,0 +1,114 @@
+<div class="min-h-screen bg-[#F7F8FA]">
+    <div class="w-full px-[30px] py-[35px]">
+        <a href="/performance-cycles" class=" w-[170px] text-[#807777] font-medium mb-[20px] flex items-center gap-[15px] link-select hover:text-[#5BA2F7]">
+            &larr; Performance Cycles
+            </a>
+        <!-- PAGE HEADER -->
+        <div class="flex justify-between items-center mb-[28px]">
+            <div class="flex flex-col gap-[6px]">
+                <span class="text-[28px] font-medium text-[#111827]">
+                    Edit Performance Cycle
+                </span>
+                <span class="text-[15px] text-gray-400">
+                    Cycle dates control when employees can set targets and when the self-review section opens.
+                </span>
+            </div>
+        </div>
+<form [formGroup]="cycleForm" (ngSubmit)="updateCycle()" class="grid grid-cols-[2fr_1fr] gap-[20px] mb-[10px]">
+    <section class="flex flex-col gap-[20px]">
+        <div class="border border-[#DDD8D8] px-[20px] py-[20px] rounded-[16px] bg-white">
+            <h3 class="uppercase tracking-wider text-[15px] text-[#6e6e6e] font-medium">Performance cycle details</h3>
+            <div class="flex flex-col gap-[20px] mt-[12px]">
+                <div class="flex flex-col gap-[6px]">
+                    <label for="" class="text-[15px] text-gray-500 font-medium">Cycle name</label>
+                    <input type="text" formControlName="cycleName" placeholder="eg.ELEVATE – Q3 (July – September 2026)"
+                        class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700/30 focus:outline-none focus:ring-1" />
+                </div>
+                <div class="flex w-full gap-[20px]">
+                    <div class="flex flex-col gap-[6px] w-[500px]">
+                        <label for="start-date" class="text-[15px] text-gray-500 font-medium">Start date</label>
+                        <input type="date" formControlName="cycleStartDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                    </div>
+                    <div class="flex flex-col gap-[6px] w-[500px]">
+                        <label for="end-date" class="text-[15px] text-gray-500 font-medium">End date</label>
+                        <input type="date" formControlName="cycleEndDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border border-[#DDD8D8] px-[20px] py-[20px] rounded-[16px] bg-white">
+            <h3 class="uppercase tracking-wider text-[15px] text-[#6e6e6e] font-medium">Target setting window</h3>
+            <div class="flex flex-col gap-[20px] mt-[12px]">
+                <div class="flex w-full gap-[20px]">
+                    <div class="flex flex-col gap-[6px] w-[500px]">
+                        <label for="start-date" class="text-[15px] text-gray-500 font-medium">Start date</label>
+                        <input type="date" formControlName="targetStartDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                    </div>
+                    <div class="flex flex-col gap-[6px] w-[500px]">
+                        <label for="end-date" class="text-[15px] text-gray-500 font-medium">End date</label>
+                        <input type="date" formControlName="targetEndDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="uppercase tracking-wider text-[15px] text-[#6e6e6e] font-medium pt-[30px]">Performance review window</h3>
+            <div class="flex flex-col gap-[20px] mt-[12px]">
+                <div class="flex w-full gap-[20px]">
+                    <div class="flex flex-col gap-[6px] w-[500px]">
+                        <label for="start-date" class="text-[15px] text-gray-500 font-medium">Start date</label>
+                        <input type="date" formControlName="reviewStartDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                    </div>
+                    <div class="flex flex-col gap-[6px] w-[500px]">
+                        <label for="end-date" class="text-[15px] text-gray-500 font-medium">End date</label>
+                        <input type="date" formControlName="reviewEndDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col gap-[20px]">
+        <div class="border border-[#DDD8D8] px-[20px] py-[20px] rounded-[16px] bg-white flex flex-col gap-[15px]">
+            <h3 class="uppercase tracking-wider font-medium text-[#6e6e6e] text-[15px]">Activation</h3>
+            <div class="flex flex-col gap-[5px]">
+                <div class="flex items-center gap-[5px]">
+                    <input type="checkbox" formControlName="activateCycle" value="active" class="w-[15px] h-[15px] accent-[#5BA2F7]" />
+                    <label for="active" class="text-[16px] text-gray-500 font-medium">Activate this cycle</label>
+                </div>
+                <div class="px-[1px]">
+                    <p class="text-[15px] text-[#6e6e6e]">Activating this will automatically close the currently active cycle and move it to the ‘Previous Cycles’ section.</p>
+                </div>
+            </div>
+            <div class=" flex flex-col w-full gap-[10px]">
+                <button type="submit" class=" button-press bg-[#5AA4FF] cursor-pointer text-white px-[28px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
+                    Edit Cycle
+                </button>
+                <button type="button" class="button-press text-black cursor-pointer border border-[#d3d3d3] px-[28px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
+                Cancel
+                </button>
+            </div>
+        </div>
+        
+        <div class="border border-[#DDD8D8] px-[20px] py-[20px] rounded-[16px] bg-white flex flex-col gap-[15px]">
+            <h3 class="uppercase tracking-wider font-medium text-[#6e6e6e] text-[15px]">Applies to</h3>
+                <div class="px-[1px]">
+                    <p class="text-[15px] text-black">All departments with a KPI template are included in ths cycle</p>
+                </div>
+
+            <div class="items-center flex w-full gap-[10px]">
+                <a href="" class=" cursor-pointer text-[#5AA4FF] font-medium">
+                    View KPI templates
+                </a>
+                <span class="text-[#5AA4FF] font-medium">
+                    →
+                </span>
+            </div>
+        </div>
+    </section>
+</form>
+
+
+
+
+
+    </div>
+</div>

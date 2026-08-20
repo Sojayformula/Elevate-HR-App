@@ -6,6 +6,10 @@ import { MyActivities } from './elevate/my-activities/my-activities/my-activitie
 import { Others } from './elevate/others/others';
 import { DepartmentPerformance } from './elevate/executive/department-performance/department-performance';
 import { PreviousCycles } from './elevate/my-activities/previous-cycles/previous-cycles';
+import { PerformanceCycles } from './elevate/hr/performance-cycles/performance-cycles';
+import { SetKpi } from './elevate/hr/set-kpi/set-kpi';
+import { CreateCycle } from './elevate/hr/performance-cycles/create-cycle/create-cycle';
+import { EditCycle } from './elevate/hr/performance-cycles/edit-cycle/edit-cycle';
 
 
 export const routes: Routes = [
@@ -31,8 +35,10 @@ export const routes: Routes = [
     {path: "previous-cycles", component: PreviousCycles},
     {path: "department-performance", component: DepartmentPerformance},
     {path: "others", component: Others},
-    
-               
+    {path: "performance-cycles", component: PerformanceCycles},
+    {path: "performance-cycles/create-cycle", component: CreateCycle},
+    {path: "performance-cycles/edit-cycle/:id", component: EditCycle},
+    {path: "set-kpi", component: SetKpi}
        ]
     }
 ];
