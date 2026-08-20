@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-previours-cycle',
+  selector: 'app-previous-cycles',
   imports: [],
-  templateUrl: './previours-cycle.html',
-  styleUrl: './previours-cycle.scss',
+  templateUrl: './previous-cycles.html',
+  styleUrl: './previous-cycles.scss',
 })
-export class PrevioursCycle {
+export class PreviousCycles {
 
   
 
@@ -94,7 +94,7 @@ export class PrevioursCycle {
  
 
   goBack() {
-    this.router.navigate(["/my-active"])
+    this.router.navigate(["/my-activities"])
   }
 
 
