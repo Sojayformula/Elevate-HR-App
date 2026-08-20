@@ -14,11 +14,17 @@ export const routes: Routes = [
     {path: "", component: PageLayout,
         children:[
     {path: "", redirectTo: "dashboard", pathMatch: "full"},
-    {path: "dashboard", component: Dashboard
-        // loadComponent: () => 
-        // import ('./elevate/elevate/elevate.component')
-        // .then(m => m.DashboardComponent) 
+    {path: "dashboard", 
+        loadComponent: () => 
+        import ('./elevate/dashboard/dashboard')
+        .then(m => m.Dashboard) 
     },
+    // {
+//   path: "dashboard",
+//   loadComponent: () =>
+//     import("./elevate/dashboard/dashboard")
+//       .then(m => m.Dashboard)
+// }
 
     {path: "elevate", component: Elevate},
     {path: "my-activities", component: MyActivities}, 

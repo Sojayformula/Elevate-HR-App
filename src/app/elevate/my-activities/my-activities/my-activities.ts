@@ -127,7 +127,7 @@ submitManagerReview() {
 
 // My activity
 previous(){
-this.router.navigate(["/previours-cycle"])
+this.router.navigate(["/previous-cycles"])
 }
 
 // Elevate
