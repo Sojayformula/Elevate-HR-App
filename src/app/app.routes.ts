@@ -2,11 +2,9 @@ import { Routes } from '@angular/router';
 import { Pagelayout } from './elevate/pagelayout/pagelayout';
 import { Dashboard } from './elevate/dashboard/dashboard';
 import { Elevate } from './elevate/elevate/elevate';
-import { MyActive } from './uer/my-active/my-active';
-import { Performance } from './uer/performance/performance';
-import { Manager } from './manager/manager/manager';
+import { MyActivities } from './elevate/my-activitie/my-activities/my-activities';
 import { Others } from './elevate/others/others';
-import { Departments } from './elevate/cto/departments/departments';
+import { PrevioursCycle } from './elevate/my-activitie/previours-cycle/previours-cycle';
 
 
 
@@ -23,10 +21,8 @@ export const routes: Routes = [
     },
 
     {path: "elevate", component: Elevate},
-    {path: "my-active", component: MyActive}, 
-    {path: "performance", component: Performance},
-    {path: "manager", component: Manager},
-    {path: "departments", component: Departments},
+    {path: "my-activities", component: MyActivities}, 
+    {path: "previours-cycle", component: PrevioursCycle},
     {path: "others", component: Others},
     
                

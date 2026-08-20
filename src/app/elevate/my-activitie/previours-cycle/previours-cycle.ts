@@ -1,17 +1,15 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-performance',
-  imports: [FormsModule, CommonModule],
-  templateUrl: './performance.html',
-  styleUrl: './performance.scss',
+  selector: 'app-previours-cycle',
+  imports: [],
+  templateUrl: './previours-cycle.html',
+  styleUrl: './previours-cycle.scss',
 })
-export class Performance {
+export class PrevioursCycle {
 
-
+  
 
     activeTab = 'target';
       isActiveTab = 'target';
@@ -126,7 +124,5 @@ submitSelfReview() {
 submitManagerReview() {
   this.nextStep();
 }
-
-
 
 }

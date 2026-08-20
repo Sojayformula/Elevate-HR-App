@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MyActive } from './my-active';
+import { ManagerPerformance } from './manager-performance';
 
-describe('MyActive', () => {
-  let component: MyActive;
-  let fixture: ComponentFixture<MyActive>;
+describe('ManagerPerformance', () => {
+  let component: ManagerPerformance;
+  let fixture: ComponentFixture<ManagerPerformance>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MyActive]
+      imports: [ManagerPerformance]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MyActive);
+    fixture = TestBed.createComponent(ManagerPerformance);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

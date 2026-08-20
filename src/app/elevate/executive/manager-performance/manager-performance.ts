@@ -1,17 +1,16 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-manager',
-  imports: [FormsModule, CommonModule],
-  templateUrl: './manager.html',
-  styleUrl: './manager.scss',
+  selector: 'app-manager-performance',
+  imports: [],
+  templateUrl: './manager-performance.html',
+  styleUrl: './manager-performance.scss',
 })
-export class Manager {
+export class ManagerPerformance {
 
 
+  
   
      activeTab = 'target';
       isActiveTab = 'target';
@@ -144,6 +143,5 @@ submitSelfReview() {
 submitManagerReview() {
   this.nextStep();
 }
-
 
 }

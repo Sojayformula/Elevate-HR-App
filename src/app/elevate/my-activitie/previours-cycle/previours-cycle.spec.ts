@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Performance } from './performance';
+import { PrevioursCycle } from './previours-cycle';
 
-describe('Performance', () => {
-  let component: Performance;
-  let fixture: ComponentFixture<Performance>;
+describe('PrevioursCycle', () => {
+  let component: PrevioursCycle;
+  let fixture: ComponentFixture<PrevioursCycle>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Performance]
+      imports: [PrevioursCycle]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Performance);
+    fixture = TestBed.createComponent(PrevioursCycle);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

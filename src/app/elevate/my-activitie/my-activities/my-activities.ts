@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { CommonModule,} from "@angular/common"
-
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-my-active',
-  imports: [FormsModule, CommonModule],
-  templateUrl: './my-active.html',
-  styleUrl: './my-active.scss',
+  selector: 'app-my-activities',
+  imports: [],
+  templateUrl: './my-activities.html',
+  styleUrl: './my-activities.scss',
 })
-export class MyActive implements OnInit{
+export class MyActivities implements OnInit{
+
 
       activeTab = 'target';
       isActiveTab = 'target';
@@ -18,9 +16,10 @@ export class MyActive implements OnInit{
       message = ""
 
 
-      constructor(private router: Router){}
 
+  constructor(private router: Router){}
 
+  
       ngOnInit(){
         
       }
@@ -127,8 +126,8 @@ submitManagerReview() {
 }
 
 // My activity
-myActive(){
-this.router.navigate(["/performance"])
+previous(){
+this.router.navigate(["/previours-cycle"])
 }
 
 // Elevate
