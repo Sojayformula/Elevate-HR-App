@@ -15,7 +15,7 @@ export class PerformanceCycles {
   }
 
   editCycle(){
-    this.router.navigate(['/performance-cycles/edit-cycle']);
+    this.router.navigate(['/performance-cycles/edit-cycle/:id']);
   }
 
 }
