@@ -12,7 +12,6 @@ export class Pagelayout implements OnInit{
 
 
   isMenuOpen = false
-  currentStep = 1;
   role = ""
 
 

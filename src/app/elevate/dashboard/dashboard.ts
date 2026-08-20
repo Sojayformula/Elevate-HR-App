@@ -31,6 +31,10 @@ export class Dashboard {
     this.router.navigate(["/my-active"])
   }
 
+  go(){
+    this.router.navigate(["/others"])
+  }
+
 
 
 }

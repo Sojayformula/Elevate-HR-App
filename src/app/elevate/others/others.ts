@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
-import { NzButtonModule } from 'ng-zorro-antd/button';
+
 
 @Component({
   selector: 'app-others',
-  imports: [NzStepsModule, NzButtonModule],
+  imports: [NzStepsModule],
   templateUrl: './others.html',
   styleUrl: './others.scss',
 })
@@ -39,17 +39,17 @@ export class Others {
   // }
 
 
-   currentStep = signal(0);
+   currentSteps = signal(0);
 
   next(): void {
-    if (this.currentStep() < 3) {
-      this.currentStep.update(step => step + 1);
+    if (this.currentSteps() < 3) {
+      this.currentSteps.update(step => step + 1);
     }
   }
 
   previous(): void {
-    if (this.currentStep() > 0) {
-      this.currentStep.update(step => step - 1);
+    if (this.currentSteps() > 0) {
+      this.currentSteps.update(step => step - 1);
     }
   }
 

@@ -6,7 +6,7 @@ import { CommonModule,} from "@angular/common"
 
 @Component({
   selector: 'app-my-active',
-  imports: [FormsModule, CommonModule, RouterOutlet],
+  imports: [FormsModule, CommonModule],
   templateUrl: './my-active.html',
   styleUrl: './my-active.scss',
 })

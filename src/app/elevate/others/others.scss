@@ -1,0 +1,12 @@
+:host ::ng-deep .ant-steps {
+  display: flex !important;
+  width: 100% !important;
+}
+
+:host ::ng-deep .ant-steps-item {
+  flex: 1 !important;
+}
+
+// :host ::ng-deep .ant-steps-item-tail {
+//   display: block !important;
+// }

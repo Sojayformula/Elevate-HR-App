@@ -58,6 +58,12 @@
     </div>
 
 
+
+
+
+<!-- //////////////////////////////////////////////// -->
+
+
   <div class="flex justify-between items-center md:mx-20">
 
     <!-- <div class="flex gap-10 h-[65px] bg- white flex items-center px-8 w- full "> -->
@@ -70,15 +76,20 @@
       <div class="flex items-center md:block hidden">
       <a routerLink="dashboard"
       routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
-      [routerLinkActiveOptions]="{exact: false}"
       class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
       Dashboard
+      </a>
+
+      
+      <a routerLink="departments"
+      routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
+      class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
+      Department
       </a>
 
 
       <a routerLink="elevate"
         routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
-        [routerLinkActiveOptions]="{exact: false}"
         class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition"
       >
         Elevate
@@ -90,7 +101,7 @@
       My activies
       </a>
       
-      @if(role){
+    
        <a routerLink="targets"
         routerLinkActive="bg-[#edf6ff] text-[#4d94d7] border border-white"
         class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
@@ -102,7 +113,7 @@
         class="px-6 py-2 rounded-full text-sm text-[#4d94d7] hover:bg-[#edf6ff] hover:text-[#4d94d7] transition">
       Team Review
       </a>
-    }
+    
 
       </div> 
 

@@ -4,72 +4,135 @@
 
 
 
-<nz-steps
-  [nzCurrent]="currentStep()"
-  nzProgressDot
->
+
+<nz-steps [nzCurrent]="currentSteps()">
+
+  <!-- Step 1 -->
   <nz-step
-    nzTitle="Account"
-    nzDescription="Create your account"
+    nzTitle="Employee"
+    nzSubtitle="Step 1"
+    nzDescription="Enter employee information."
   />
 
+  <!-- Step 2 -->
   <nz-step
-    nzTitle="Address"
-    nzDescription="Enter your address"
+    nzTitle="Employment"
+    nzSubtitle="Step 2"
+    nzDescription="Enter employment details."
   />
 
+  <!-- Step 3 -->
   <nz-step
-    nzTitle="Payment"
-    nzDescription="Choose payment method"
+    nzTitle="Documents"
+    nzSubtitle="Step 3"
+    nzDescription="Upload required documents."
   />
 
+  <!-- Step 4 -->
   <nz-step
-    nzTitle="Complete"
-    nzDescription="Order completed"
+    nzTitle="Finished"
+    nzSubtitle="Complete"
+    nzDescription="Employee setup completed."
   />
+
 </nz-steps>
 
-<div class="step-content">
+<div class="mt-8">
 
-  @if (currentStep() === 0) {
-    <h2>Account</h2>
-    <p>Create your account.</p>
-  }
+  @switch (currentSteps()) {
 
-  @if (currentStep() === 1) {
-    <h2>Address</h2>
-    <p>Enter your delivery address.</p>
-  }
+    @case (0) {
+      <div>
+        <h2>Employee Information</h2>
 
-  @if (currentStep() === 2) {
-    <h2>Payment</h2>
-    <p>Choose your payment method.</p>
-  }
+        <p>
+          Enter the employee's basic information.
+        </p>
 
-  @if (currentStep() === 3) {
-    <h2>Complete</h2>
-    <p>Your order has been completed.</p>
+        <!-- Your employee form goes here -->
+
+      </div>
+    }
+
+    @case (1) {
+      <div>
+        <h2>Employment Details</h2>
+
+        <p>
+          Enter the employee's employment information.
+        </p>
+
+        <!-- Your employment form goes here -->
+
+      </div>
+    }
+
+    @case (2) {
+      <div>
+        <h2>Documents</h2>
+
+        <p>
+          Upload the employee's required documents.
+        </p>
+
+        <!-- Your document upload goes here -->
+
+      </div>
+    }
+
+    @case (3) {
+      <div>
+        <h2>Finished</h2>
+
+        <p>
+          The employee setup has been completed successfully.
+        </p>
+
+      </div>
+    }
+
   }
 
 </div>
 
-<div class="actions">
+<div class="mt-8 flex gap-3">
 
   <button
     nz-button
-    [disabled]="currentStep() === 0"
+    [disabled]="currentSteps() === 0"
     (click)="previous()"
   >
     Previous
   </button>
 
-  <button
-    nz-button
-    nzType="primary"
-    [disabled]="currentStep() === 3"
-    (click)="next()"
-  >
-    Next
-  </button>
+  @if (currentSteps() < 3) {
+
+    <button
+      nz-button
+      nzType="primary"
+      (click)="next()"
+    >
+      Next
+    </button>
+
+  }
+
+  @if (currentSteps() === 3) {
+
+    <button
+      nz-button
+      nzType="primary"
+    >
+      Submit
+    </button>
+
+  }
 
 </div>
+
+
+
+
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+
