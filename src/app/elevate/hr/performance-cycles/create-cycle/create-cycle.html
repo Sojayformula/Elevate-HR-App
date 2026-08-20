@@ -14,24 +14,24 @@
                 </span>
             </div>
         </div>
-<body class="grid grid-cols-[75%_25%] gap-[20px] mb-[10px]">
+<form [formGroup]="cycleForm" (ngSubmit)="createCycle()" class="grid grid-cols-[2fr_1fr] gap-[20px] mb-[10px]">
     <section class="flex flex-col gap-[20px]">
         <div class="border border-[#DDD8D8] px-[20px] py-[20px] rounded-[16px] bg-white">
             <h3 class="uppercase tracking-wider text-[15px] text-[#6e6e6e] font-medium">Performance cycle details</h3>
             <div class="flex flex-col gap-[20px] mt-[12px]">
                 <div class="flex flex-col gap-[6px]">
                     <label for="" class="text-[15px] text-gray-500 font-medium">Cycle name</label>
-                    <input type="text" placeholder="eg.ELEVATE – Q3 (July – September 2026)"
+                    <input type="text" formControlName="cycleName" placeholder="eg.ELEVATE – Q3 (July – September 2026)"
                         class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700/30 focus:outline-none focus:ring-1" />
                 </div>
                 <div class="flex w-full gap-[20px]">
                     <div class="flex flex-col gap-[6px] w-[500px]">
                         <label for="start-date" class="text-[15px] text-gray-500 font-medium">Start date</label>
-                        <input type="date" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                        <input type="date" formControlName="cycleStartDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
                     </div>
                     <div class="flex flex-col gap-[6px] w-[500px]">
                         <label for="end-date" class="text-[15px] text-gray-500 font-medium">End date</label>
-                        <input type="date" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                        <input type="date" formControlName="cycleEndDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
                     </div>
                 </div>
             </div>
@@ -42,11 +42,11 @@
                 <div class="flex w-full gap-[20px]">
                     <div class="flex flex-col gap-[6px] w-[500px]">
                         <label for="start-date" class="text-[15px] text-gray-500 font-medium">Start date</label>
-                        <input type="date" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                        <input type="date" formControlName="targetStartDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
                     </div>
                     <div class="flex flex-col gap-[6px] w-[500px]">
                         <label for="end-date" class="text-[15px] text-gray-500 font-medium">End date</label>
-                        <input type="date" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                        <input type="date" formControlName="targetEndDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
                     </div>
                 </div>
             </div>
@@ -56,11 +56,11 @@
                 <div class="flex w-full gap-[20px]">
                     <div class="flex flex-col gap-[6px] w-[500px]">
                         <label for="start-date" class="text-[15px] text-gray-500 font-medium">Start date</label>
-                        <input type="date" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                        <input type="date" formControlName="reviewStartDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
                     </div>
                     <div class="flex flex-col gap-[6px] w-[500px]">
                         <label for="end-date" class="text-[15px] text-gray-500 font-medium">End date</label>
-                        <input type="date" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
+                        <input type="date" formControlName="reviewEndDate" class="border border-[#dddddd] rounded-[8px] px-[12px] py-[10px] text-[15px] text-gray-700 focus:outline-none focus:ring-1 " />
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <h3 class="uppercase tracking-wider font-medium text-[#6e6e6e] text-[15px]">Activation</h3>
             <div class="flex flex-col gap-[5px]">
                 <div class="flex items-center gap-[5px]">
-                    <input type="checkbox" value="active" class="w-[15px] h-[15px] accent-[#5BA2F7]" />
+                    <input type="checkbox" formControlName="activateCycle" value="active" class="w-[15px] h-[15px] accent-[#5BA2F7]" />
                     <label for="active" class="text-[16px] text-gray-500 font-medium">Activate this cycle</label>
                 </div>
                 <div class="px-[1px]">
@@ -79,11 +79,13 @@
                 </div>
             </div>
             <div class=" flex flex-col w-full gap-[10px]">
-                <button class=" button-press bg-[#5AA4FF] cursor-pointer text-white px-[28px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
-                    Create Cycle
+                <button type="submit" [disabled]="cycleForm.invalid" 
+                    class="button-press bg-[#5AA4FF] cursor-pointer text-white py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm
+                        disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-gray-500">
+                        Create Cycle
                 </button>
-                <button class="button-press text-black cursor-pointer border border-[#d3d3d3] px-[28px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
-                Cancel
+                <button type="button" class="button-press border border-[#d3d3d3] cursor-pointer text-black py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
+                    Cancel
                 </button>
             </div>
         </div>
@@ -104,7 +106,7 @@
             </div>
         </div>
     </section>
-</body>
+</form>
 
 
 
