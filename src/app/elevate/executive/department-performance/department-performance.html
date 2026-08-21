@@ -68,8 +68,9 @@
                             <td class="px-4 py-3">16/24 review</td>
                             <td class="px-4 py-3">80/100</td>
                             <td class="px-4 py-3">
-                                <button class="flex gap-2 cursor-pointer text-[#5AA4FF] hover:text-blue-700">
-                                    <p>View</p>
+                                <button (click)="goToManagers()"
+                                class="flex gap-2 cursor-pointer text-[#5AA4FF] hover:text-blue-700">
+                                    View
                                 <svg xmlns="http://www.w3.org/2000/svg" 
                                     width="20" 
                                     height="24" 
@@ -95,8 +96,9 @@
                             <td class="px-4 v">16/24 review</td>
                             <td class="px-4 py-3">80/100</td>
                             <td class="px-4 py-3">
-                                <button class="flex gap-2 cursor-pointer text-[#5AA4FF] hover:text-blue-700">
-                                    <p>View</p>
+                                <button (click)="goToManagers()"
+                                class="flex gap-2 cursor-pointer text-[#5AA4FF] hover:text-blue-700">
+                                    View
                                 <svg xmlns="http://www.w3.org/2000/svg" 
                                     width="20" 
                                     height="24" 
@@ -118,114 +120,6 @@
                 </table>
              </div>
 
-
-             <!-- Table 2 -->
-      <section>
-        <main>
-          <div class="main mt-10">
-
-            <p class="text-[20px] text-[#807777]">Managers</p>
-            <!-- table -->
-            <div class="border rounded-[16px]">
-              <div class="flex items-center justify-between mt-2 border-b">
-                <div class="flex gap-2 mx-10 py-1">
-                  <p class="bg-[#B588E4] rounded-full w-[55px] h-[55px]"></p>
-                  <div>
-                  <p class="text-[#000000]">Technology</p>
-                  <p>Managers: Sally Smith . 24 team members</p>
-                  </div>
-                </div>
-                <div>
-                  <p class="text-[#6E6E6E]">16/24 reviewed</p>
-                </div>
-                <div>
-                    <p>80/100</p>
-                </div>
-                <button class="flex gap-2 text-[#000000] mx-10 cursor-pointer text-blue-500 hover:text-blue-700">
-                  <p>View Managers</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" 
-                  width="20" 
-                  height="26" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  stroke-width="2" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  class="lucide lucide-move-right-icon lucide-move-right ">
-                  <path d="M18 8L22 12L18 16"/>
-                  <path d="M2 12H22"/>
-                </svg>
-              </button>
-              </div>
-              
-              <div class="flex items-center justify-between">
-                 <div class="flex gap-2 mx-10 py-1">
-                  <p class="bg-[#B588E4] rounded-full w-[55px] h-[55px]"></p>
-                  <div>
-                  <p class="text-[#000000]">Technology</p>
-                  <p>Managers: Sally Smith . 24 team members</p>
-                  </div>
-                  
-                </div>
-
-                <div>
-                  <p class="text-[#6E6E6E]">16/24 reviewed</p>
-                </div>
-                <div>
-                    <p>80/100</p>
-                </div>
-                <button class="flex gap-2 text-[#000000] mx-10 cursor-pointer text-blue-500 hover:text-blue-700">
-                  <p>View managers</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" 
-                  width="20" 
-                  height="26" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  stroke-width="2" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  class="lucide lucide-move-right-icon lucide-move-right ">
-                  <path d="M18 8L22 12L18 16"/>
-                  <path d="M2 12H22"/>
-                </svg>
-              </button>
-              </div>
-              
-            </div>
-
-          </div>
-        </main>
-      </section>
-        
-
     </div>
 </main>
 
-
-<!-- llllllllllllllllllllllllllllllllllllllllllllllllllllllll -->
-<div class="progress-item mt-20">
-  <div class="progress-header">
-    <span>Project Completion</span>
-    <span>75%</span>
-  </div>
-
-
-  <nz-progress [nzPercent]="70"></nz-progress>
-
-
-
-  <nz-progress [nzPercent]="30" />
-    <nz-progress [nzPercent]="50" nzStatus="active" />
-    <nz-progress [nzPercent]="70" nzStatus="exception" />
-    <nz-progress [nzPercent]="100" />
-    <nz-progress [nzPercent]="50" [nzShowInfo]="false" />
-  
-
-  <!-- <nz-progress
-    [nzPercent]="75"
-    [nzShowInfo]="false"
-    nzStrokeWidth="10">
-  </nz-progress>
-</div> -->

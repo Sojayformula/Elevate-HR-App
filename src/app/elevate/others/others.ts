@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 
 
 @Component({
   selector: 'app-others',
-  imports: [NzStepsModule],
+  imports: [NzStepsModule, CommonModule, NzProgressModule],
   templateUrl: './others.html',
   styleUrl: './others.scss',
 })

@@ -19,4 +19,8 @@ export class DepartmentPerformance {
     this.router.navigate(["/dashboard"])
   }
 
+  goToManagers(){
+    this.router.navigate(["/manager-performance"])
+  }
+
 }
