@@ -101,47 +101,8 @@ tabActive(tab: string) {
 
  
 
-  goBack() {
-    this.router.navigate(["/"])
+  goToDashboard() {
+    this.router.navigate(["/dashboard"])
   }
-
-
-    isActive = false;
-
-  toggleActive() {
-    this.isActive = !this.isActive;
-  }
-
-
-  // move to next step //
-nextStep() {
-  if (this.currentStep < this.totalStep) {
-    this.currentStep++;
-  }
-}
-
-previous() {
-  if (this.currentStep > this.totalStep) {
-    this.currentStep--;
-  }
-}
-
-    // first toggle //
-  setStep(tab: any) {
-    this.activeTab = tab;
-  }
-
-
-submitTarget() {
-  this.nextStep();
-}
-
-submitSelfReview() {
-  this.nextStep();
-}
-
-submitManagerReview() {
-  this.nextStep();
-}
 
 }
