@@ -13,4 +13,8 @@ export class SetKpi {
   createKpi(){
     this.router.navigate(['/create-kpi'])
   }
+
+  editKpi(){
+    this.router.navigate(['/edit-kpi'])
+  }
 }

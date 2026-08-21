@@ -6,11 +6,6 @@ import { MyActivities } from './elevate/my-activities/my-activities/my-activitie
 import { Others } from './elevate/others/others';
 import { DepartmentPerformance } from './elevate/executive/department-performance/department-performance';
 import { PreviousCycles } from './elevate/my-activities/previous-cycles/previous-cycles';
-import { PerformanceCycles } from './elevate/hr/performance-cycles/performance-cycles';
-import { SetKpi } from './elevate/hr/set-kpi/set-kpi';
-import { CreateCycle } from './elevate/hr/performance-cycles/create-cycle/create-cycle';
-import { EditCycle } from './elevate/hr/performance-cycles/edit-cycle/edit-cycle';
-
 
 export const routes: Routes = [
 
@@ -29,11 +24,13 @@ export const routes: Routes = [
     {path: "previous-cycles", component: PreviousCycles},
     {path: "department-performance", component: DepartmentPerformance},
     {path: "others", component: Others},
-    {path: "performance-cycles", component: PerformanceCycles},
-    {path: "performance-cycles/create-cycle", component: CreateCycle},
-    {path: "performance-cycles/edit-cycle/:id", component: EditCycle},
-    {path: "set-kpi", component: SetKpi}
-       ]
+    {path: "performance-cycles", loadComponent: () => import('./elevate/hr/performance-cycles/performance-cycles').then(m => m.PerformanceCycles)},
+    {path: "performance-cycles/create-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/create-cycle/create-cycle').then(m => m.CreateCycle)},
+    {path: "performance-cycles/edit-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/edit-cycle/edit-cycle').then(m => m.EditCycle)},
+    {path: "set-kpi", loadComponent: () => import('./elevate/hr/set-kpi/set-kpi').then(m => m.SetKpi)},
+    {path: "create-kpi", loadComponent: () => import('./elevate/hr/set-kpi/create-kpi/create-kpi').then(m => m.CreateKpi)},
+    {path: "edit-kpi", loadComponent: () => import('./elevate/hr/set-kpi/edit-kpi/edit-kpi').then(m => m.EditKpi)}
+]
     }
 ];
 
