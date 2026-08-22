@@ -21,8 +21,8 @@ export const routes: Routes = [
     {path: "", redirectTo: "dashboard", pathMatch: "full"},
     {path: "dashboard", loadComponent: () => import ('./elevate/dashboard/dashboard').then(m => m.Dashboard) },
 
-    {path: "elevate", component: Elevate},
-    {path: "my-activities", component: MyActivities}, 
+    {path: "elevate", loadComponent: () => import ('./elevate/elevate/elevate').then(m => m.Elevate)},
+    {path: "my-activities", loadComponent: () => import ('./elevate/my-activities/my-activities/my-activities').then(m => m.MyActivities)}, 
     {path: "previous-cycles", component: PreviousCycles},
     {path: "department-performance", component: DepartmentPerformance},
     {path: "manager-performance", component: ManagerPerformance},

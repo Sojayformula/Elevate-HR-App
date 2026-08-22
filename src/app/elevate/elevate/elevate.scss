@@ -1,0 +1,12 @@
+// .complete-step {
+//   background-color: #22c55e;
+// }
+
+::ng-deep .complete-step .ant-steps-item-icon {
+  background-color: #22c55e !important;
+  border-color: #22c55e !important;
+}
+
+::ng-deep .complete-step .ant-steps-icon {
+  color: white !important;
+}
