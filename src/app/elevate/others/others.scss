@@ -7,6 +7,6 @@
   flex: 1 !important;
 }
 
-// :host ::ng-deep .ant-steps-item-tail {
-//   display: block !important;
-// }
+:host ::ng-deep .ant-steps-item-tail {
+  display: block !important;
+}

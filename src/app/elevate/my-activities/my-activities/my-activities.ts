@@ -98,41 +98,76 @@ export class MyActivities implements OnInit{
   }
 
 
-    isActive = false;
 
-  toggleActive() {
-    this.isActive = !this.isActive;
+previoursCycle = 'user'
+elevate = "manager"
+
+
+// Table button //
+goToPrevioursCycle(){
+  switch(this.previoursCycle){
+
+    case 'user':
+    this.router.navigate(["previous-cycles"])
+    break
+
+    case 'manager':
+    this.router.navigate(["/previous-cycles"])
+    break
   }
-
-
-  // move to next step //
-nextStep() {
-  if (this.currentStep < 3) {
-    this.currentStep++;
-  }
+  
 }
 
 
-submitTarget() {
-  this.nextStep();
-}
+    role = 'manager'
+    goToElevate(){
+      if(this.role === 'user'){
+        this.router.navigate(["/elevate/user-elevate"])
 
-submitSelfReview() {
-  this.nextStep();
-}
+      }else{
+        if(this.role === 'manager'){
+        this.router.navigate(["/elevate/manager-elevate"])
+        }
+      }
+    }
 
-submitManagerReview() {
-  this.nextStep();
-}
+   
 
-// My activity
-previous(){
-this.router.navigate(["/previours-cycle"])
-}
 
-// Elevate
-elevate(){
-this.router.navigate(["/elevate"])
-}
+
+
+
+
+
+
+
+
+
+//        isActive = false;
+
+//   toggleActive() {
+//     this.isActive = !this.isActive;
+//   }
+
+
+//   // move to next step //
+// nextStep() {
+//   if (this.currentStep < 3) {
+//     this.currentStep++;
+//   }
+// }
+
+
+// submitTarget() {
+//   this.nextStep();
+// }
+
+// submitSelfReview() {
+//   this.nextStep();
+// }
+
+// submitManagerReview() {
+//   this.nextStep();
+// }
 
 }
