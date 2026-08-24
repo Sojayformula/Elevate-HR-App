@@ -1,8 +1,10 @@
 <div class="min-h-screen bg-[#F7F8FA]">
     <div class="w-full px-[30px] py-[35px]">
-        <a href="/dashboard" class=" w-[170px] text-[#807777] font-medium mb-[20px] flex items-center gap-[15px] link-select hover:text-[#5BA2F7]">
+
+        <!-- BACK TO DASHBOARD -->
+        <a routerLink="/dashboard" class="w-[170px] text-[#807777] font-medium mb-[20px] flex items-center gap-[15px] link-select hover:text-[#5BA2F7]">
             &larr; Dashboard
-            </a>
+        </a>
 
         <!-- PAGE HEADER -->
         <div class="flex justify-between items-center mb-[28px]">
@@ -14,147 +16,154 @@
                     KPI templates are defined by the department and job title.
                 </span>
             </div>
-            <button (click)="createKpi()" class=" button-press cursor-pointer bg-[#5BA2F7] text-white px-[40px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
+            <button (click)="createKpi()" class="button-press cursor-pointer bg-[#5BA2F7] text-white px-[40px] py-[12px] rounded-[8px] text-[15px] font-medium shadow-sm">
                 Create Template
             </button>
         </div>
-    
+
+        <!-- KPI TEMPLATES -->
         <section class="flex flex-col gap-5">
-            <h3 class="uppercase tracking-wider text-[#6e6e6e] text-[15px] font-medium ">Kpi templates</h3>
+            <h3 class="uppercase tracking-wider text-[#6e6e6e] text-[15px] font-medium">KPI Templates</h3>
             <div class="bg-white border border-[#DDD8D8] rounded-[16px] px-[25px] py-[10px]">
-                <div class=" border-b border-[#DDD8D8] py-[10px]">
+                <div class="border-b border-[#DDD8D8] py-[10px]">
                     <div class="flex justify-between w-full items-center">
                         <div class="flex flex-col">
                             <h3 class="text-[17px] font-medium">Software Engineer</h3>
                             <p class="text-[#6e6e6e] text-[14px]">Client-side Engineering • 4 KPIs • 24 team members • updated 12 Jul 2026</p>
                         </div>
-                        <div>
-                            <button (click)="editKpi()" class="button-press hover:bg-[#5BA2F7] hover:text-white bg-white border border-[#B9B9B9] text-[#333] px-[28px] py-[10px] rounded-[8px] text-[15px] font-medium flex items-center gap-[10px]">
+
+                        <button (click)="editKpi()" class="button-press hover:bg-[#5BA2F7] hover:text-white bg-white border border-[#B9B9B9] text-[#333] px-[28px] py-[10px] rounded-[8px] text-[15px] font-medium flex items-center gap-[10px]">
                             Edit
                             <span class="text-[18px]">
-                            →
+                                →
                             </span>
-                            </button>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="flex justify-between w-full items-center py-3">
                     <div class="flex flex-col gap-1">
                         <h3 class="font-medium">Application Development & Delivery</h3>
-                            <div class="text-[#6e6e6e]">
+                        <div class="text-[#6e6e6e]">
                             <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
                     </div>
                     <div>
                         <p class="font-medium text-[16px]">60%</p>
                     </div>
                 </div>
-                    <div class="flex justify-between w-full items-center py-3">
-                        <div class="flex flex-col gap-1">
-                            <h3 class="font-medium">Operational Efficiency & Code Quality</h3>
-                            <div class="text-[#6e6e6e]">
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
-                            </div>
+                <div class="flex justify-between w-full items-center py-3">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-medium">Operational Efficiency & Code Quality</h3>
+                        <div class="text-[#6e6e6e]">
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
+                    </div>
                     <div>
                         <p class="font-medium text-[16px]">15%</p>
                     </div>
                 </div>
-                    <div class="flex justify-between w-full items-center py-3">
-                        <div class="flex flex-col gap-1">
-                            <h3 class="font-medium">Learning & Development</h3>
-                            <div class="text-[#6e6e6e]">
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
-                            </div>
+                <div class="flex justify-between w-full items-center py-3">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-medium">Learning & Development</h3>
+                        <div class="text-[#6e6e6e]">
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
+                    </div>
                     <div>
                         <p class="font-medium text-[16px]">15%</p>
                     </div>
                 </div>
-                    <div class="flex justify-between w-full items-center py-3">
-                        <div class="flex flex-col gap-1">
-                            <h3 class="font-medium">Application Development & Delivery</h3>
-                            <div class="text-[#6e6e6e]">
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
-                            </div>
+
+                <div class="flex justify-between w-full items-center py-3">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-medium">Application Development & Delivery</h3>
+                        <div class="text-[#6e6e6e]">
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
+                    </div>
                     <div>
                         <p class="font-medium text-[16px]">10%</p>
                     </div>
                 </div>
+
             </div>
 
-                        <div class="bg-white border border-[#DDD8D8] rounded-[16px] px-[25px] py-[10px]">
-                <div class=" border-b border-[#DDD8D8] py-[10px]">
+
+            <!-- TEMPLATE 2 -->
+            <div class="bg-white border border-[#DDD8D8] rounded-[16px] px-[25px] py-[10px]">
+
+                <!-- TEMPLATE HEADER -->
+                <div class="border-b border-[#DDD8D8] py-[10px]">
                     <div class="flex justify-between w-full items-center">
                         <div class="flex flex-col">
-                            <h3 class="text-[17px] font-medium">Software Engineer</h3>
-                            <p class="text-[#6e6e6e] text-[14px]">Client-side Engineering • 4 KPIs • 24 team members • updated 12 Jul 2026</p>
+                            <h3 class="text-[17px] font-medium">Backend Engineer</h3>
+                            <p class="text-[#6e6e6e] text-[14px]">Technology • 4KPIs • 12 team members • updated 12 Jul 2026 </p>
                         </div>
-                        <div>
-                            <button (click)="editKpi()" class="button-press hover:bg-[#5BA2F7] hover:text-white bg-white border border-[#B9B9B9] text-[#333] px-[28px] py-[10px] rounded-[8px] text-[15px] font-medium flex items-center gap-[10px]">
+                        <button (click)="editKpi()" class="button-press hover:bg-[#5BA2F7] hover:text-white bg-white border border-[#B9B9B9] text-[#333] px-[28px] py-[10px] rounded-[8px] text-[15px] font-medium flex items-center gap-[10px]">
                             Edit
                             <span class="text-[18px]">
-                            →
+                                →
                             </span>
-                            </button>
-                        </div>
+                        </button>
+
                     </div>
                 </div>
                 <div class="flex justify-between w-full items-center py-3">
                     <div class="flex flex-col gap-1">
                         <h3 class="font-medium">Application Development & Delivery</h3>
-                            <div class="text-[#6e6e6e]">
+                        <div class="text-[#6e6e6e]">
                             <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
                     </div>
                     <div>
                         <p class="font-medium text-[16px]">60%</p>
                     </div>
                 </div>
-                    <div class="flex justify-between w-full items-center py-3">
-                        <div class="flex flex-col gap-1">
-                            <h3 class="font-medium">Operational Efficiency & Code Quality</h3>
-                            <div class="text-[#6e6e6e]">
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
-                            </div>
+
+                <div class="flex justify-between w-full items-center py-3">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-medium">Operational Efficiency & Code Quality</h3>
+                        <div class="text-[#6e6e6e]">
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
+                    </div>
                     <div>
                         <p class="font-medium text-[16px]">15%</p>
                     </div>
                 </div>
-                    <div class="flex justify-between w-full items-center py-3">
-                        <div class="flex flex-col gap-1">
-                            <h3 class="font-medium">Learning & Development</h3>
-                            <div class="text-[#6e6e6e]">
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
-                            </div>
+
+                <div class="flex justify-between w-full items-center py-3">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-medium">Learning & Development</h3>
+                        <div class="text-[#6e6e6e]">
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
+                    </div>
                     <div>
                         <p class="font-medium text-[16px]">15%</p>
                     </div>
                 </div>
-                    <div class="flex justify-between w-full items-center py-32">
-                        <div class="flex flex-col gap-1">
-                            <h3 class="font-medium">Application Development & Delivery</h3>
-                            <div class="text-[#6e6e6e]">
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
-                                <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>     
-                            </div>
+                <div class="flex justify-between w-full items-center py-3">
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-medium">Application Development & Delivery</h3>
+
+                        <div class="text-[#6e6e6e]">
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
+                            <p class="text-[15px]">• Deliver 100% of assigned tasks within agreed sprint timelines.</p>
                         </div>
+                    </div>
                     <div>
                         <p class="font-medium text-[16px]">10%</p>
                     </div>
                 </div>
             </div>
         </section>
-
     </div>
 </div>

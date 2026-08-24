@@ -29,7 +29,8 @@ export const routes: Routes = [
     {path: "performance-cycles/edit-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/edit-cycle/edit-cycle').then(m => m.EditCycle)},
     {path: "set-kpi", loadComponent: () => import('./elevate/hr/set-kpi/set-kpi').then(m => m.SetKpi)},
     {path: "create-kpi", loadComponent: () => import('./elevate/hr/set-kpi/create-kpi/create-kpi').then(m => m.CreateKpi)},
-    {path: "edit-kpi", loadComponent: () => import('./elevate/hr/set-kpi/edit-kpi/edit-kpi').then(m => m.EditKpi)}
+    {path: "edit-kpi", loadComponent: () => import('./elevate/hr/set-kpi/edit-kpi/edit-kpi').then(m => m.EditKpi)},
+    {path: "department-management", loadComponent: ()=> import('./elevate/hr/department-management/department-management').then(m => m.DepartmentManagement)}
 ]
     }
 ];
