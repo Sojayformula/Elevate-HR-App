@@ -14,13 +14,6 @@ export class Dashboard {
 
      constructor(private router: Router){}
 
-     manger(){
-     this.router.navigate(["/manager"])
-     }
-
-  // setTab(tab: string) {
-  //   this.activeTab = tab;
-  // }
 
   goToElevate(){
     this.router.navigate(["/elevate"])
@@ -28,7 +21,7 @@ export class Dashboard {
 
 
   goToMyActivities(){
-    this.router.navigate(["/my-active"])
+    this.router.navigate(["/my-activities"])
   }
 
   go(){

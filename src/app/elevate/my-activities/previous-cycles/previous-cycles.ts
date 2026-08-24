@@ -11,10 +11,11 @@ export class PreviousCycles {
 
   
 
-    activeTab = 'target';
+      // activeTab = 'target';
       isActiveTab = 'target';
       currentStep = 1;
       message = ""
+      isActive = false;
 
 
       constructor(private router: Router){}
@@ -25,14 +26,11 @@ export class PreviousCycles {
       }
 
       // first toggle //
-  setTab(tab: string) {
-    this.activeTab = tab;
-  }
+  // setTab(tab: string) {
+  //   this.activeTab = tab;
+  // }
 
-  //  second toggle //
-  tabActive(tab: string){
-    this.isActiveTab = tab
-  }
+
 
 
    // ELEVATE //
@@ -98,7 +96,6 @@ export class PreviousCycles {
   }
 
 
-    isActive = false;
 
   toggleActive() {
     this.isActive = !this.isActive;
@@ -113,16 +110,5 @@ nextStep() {
 }
 
 
-submitTarget() {
-  this.nextStep();
-}
-
-submitSelfReview() {
-  this.nextStep();
-}
-
-submitManagerReview() {
-  this.nextStep();
-}
 
 }
