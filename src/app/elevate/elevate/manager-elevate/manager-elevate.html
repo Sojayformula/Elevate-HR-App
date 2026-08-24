@@ -55,7 +55,7 @@
   <section class="mx-5 sm:mx-8 md:mx-20 mt-9">
     <div class="bg-white border border-gray-300 rounded-xl ">
       <div class="py-8 h-[150px] overflow-y-hidden">
-        <div class="px-5">
+        <!-- <div class="px-5">
           <nz-steps
           [nzCurrent]="
           isActiveTab === 'target' ? 0 :
@@ -69,7 +69,30 @@
           <nz-step nzTitle="Complete"
           ></nz-step>
         </nz-steps>
-      </div>
+      </div> -->
+
+      <nz-steps
+  [nzCurrent]="
+    isActiveTab === 'target' ? 0 :
+    isActiveTab === 'self-review' ? 1 :
+    isActiveTab === 'manager-review' ? 2 :
+    3
+  "
+>
+  <nz-step nzTitle="Target"></nz-step>
+  <nz-step nzTitle="Self Review"></nz-step>
+  <nz-step nzTitle="Manager Review"></nz-step>
+  <nz-step nzTitle="Complete"></nz-step>
+</nz-steps>
+
+      
+      <!-- <nz-steps [nzCurrent]="1" nzStatus="error">
+        <nz-step nzTitle="Finished" nzDescription="This is a description." />
+        <nz-step nzTitle="In Progress" nzDescription="This is a description." />
+        <nz-step nzTitle="Waiting" nzDescription="This is a description." />
+      </nz-steps> -->
+  
+      
        
 
           <!-- DIVIDER -->

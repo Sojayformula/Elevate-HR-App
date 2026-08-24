@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-performance-cycles',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './performance-cycles.html',
   styleUrl: './performance-cycles.scss',
 })
@@ -15,7 +15,7 @@ export class PerformanceCycles {
   }
 
   editCycle(){
-    this.router.navigate(['/performance-cycles/edit-cycle/:id']);
+    this.router.navigate(['/performance-cycles/edit-cycle']);
   }
 
 }

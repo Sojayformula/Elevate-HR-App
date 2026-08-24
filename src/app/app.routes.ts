@@ -39,11 +39,14 @@ export const routes: Routes = [
     {path: "department-performance", loadComponent: () => import ('./elevate/executive/department-performance/department-performance').then(m => m.DepartmentPerformance)},
     {path: "manager-performance", loadComponent: () => import ('./elevate/executive/manager-performance/manager-performance').then(m => m.ManagerPerformance)},
     {path: "others", component: Others},
-    {path: "performance-cycles", component: PerformanceCycles},
-    {path: "performance-cycles/create-cycle", component: CreateCycle},
-    {path: "performance-cycles/edit-cycle/:id", component: EditCycle},
-    {path: "set-kpi", component: SetKpi}
-       ]
+    {path: "performance-cycles", loadComponent: () => import('./elevate/hr/performance-cycles/performance-cycles').then(m => m.PerformanceCycles)},
+    {path: "performance-cycles/create-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/create-cycle/create-cycle').then(m => m.CreateCycle)},
+    {path: "performance-cycles/edit-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/edit-cycle/edit-cycle').then(m => m.EditCycle)},
+    {path: "set-kpi", loadComponent: () => import('./elevate/hr/set-kpi/set-kpi').then(m => m.SetKpi)},
+    {path: "create-kpi", loadComponent: () => import('./elevate/hr/set-kpi/create-kpi/create-kpi').then(m => m.CreateKpi)},
+    {path: "edit-kpi", loadComponent: () => import('./elevate/hr/set-kpi/edit-kpi/edit-kpi').then(m => m.EditKpi)},
+    {path: "department-management", loadComponent: ()=> import('./elevate/hr/department-management/department-management').then(m => m.DepartmentManagement)}
+]
     }
 ];
  

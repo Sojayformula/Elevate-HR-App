@@ -3,9 +3,11 @@ import { Router } from '@angular/router';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzCollapseModule} from 'ng-zorro-antd/collapse'
 
+
+
 @Component({
   selector: 'app-manager-elevate',
-  imports: [NzStepsModule, NzCollapseModule],
+  imports: [NzStepsModule, NzCollapseModule, ],
   templateUrl: './manager-elevate.html',
   styleUrl: './manager-elevate.scss',
 })
@@ -17,6 +19,9 @@ export class ManagerElevate {
   totalStep = 4
   message = ""
   coments = ""
+
+
+current = 3;
 
   role = 'manager'
 
