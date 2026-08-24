@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NzStepsModule } from 'ng-zorro-antd/steps';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [NzProgressModule, NzStepsModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })
 export class Dashboard {
 
   
-     activeTab = 'elevate';
+  activeTab = 'elevate';
 
-     constructor(private router: Router){}
+  constructor(private router: Router){}
 
 
   goToElevate(){
@@ -28,6 +30,8 @@ export class Dashboard {
     this.router.navigate(["/others"])
   }
 
-
+goToDepartmentManagement(){
+  this.router.navigate(["/department-management"])
+}
 
 }
