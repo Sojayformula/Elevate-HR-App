@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 
+
 @Component({
   selector: 'app-department-performance',
   imports: [NzProgressModule],

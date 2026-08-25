@@ -27,7 +27,7 @@ export class Dashboard {
   }
 
   go(){
-    this.router.navigate(["/others"])
+    this.router.navigate(["/manager-performance"])
   }
 
 goToDepartmentManagement(){

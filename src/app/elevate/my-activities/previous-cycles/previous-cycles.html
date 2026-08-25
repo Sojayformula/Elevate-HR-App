@@ -1,5 +1,5 @@
-
-<main class="md:mx-20 mx-2 overflow-auto mt-10">
+@if(isActiveTabs === 'complete'){}
+<main class="md:mx-20 mx-2 overflow-auto mt-10 ">
 
      <!-- Back -->
       <section>
@@ -26,8 +26,8 @@
           </button>
 
        <!-- Page title -->
-        <div class="flex justify-between">
-          <div class="mb-8">
+        <div class="md:flex justify-between">
+          <div class="mb-8 mt-10">
             <h1 class="text-xl font-semibold text-gray-900">
               Previous Activities
             </h1>
@@ -39,160 +39,67 @@
 
 
            <!-- total score card -->
-            <div class="border-2 border-blue-500 w-[9rem] px-5 py-2 rounded-[12px]">
+            <div class="border-2 border-blue-500 w-[9rem] h-[100px] px-5 py-2 rounded-[12px] relative  left-45 md:left-0">
               <p class="">TOTAL SCORE</p>
-              <div class="flex gap-3 mt-2">
+              <div class="flex items-center gap-1 mt-2">
                 <p class="font-bold text-[35px] text-blue-500">80</p>
-                <p class="mt-4">/ 100</p>
+                <p class="">/ 100</p>
               </div>
             </div>
             </div>
 
           </div>
-
           </div>
     </section>
 
 
-
-
-
       <!-- PROGRESS SECTION -->
-  <section>
-  <div class="mt-9 w-full overflow-auto">
-
+  <section class="mt-10">
     <div class="bg-white border border-gray-300 rounded-xl">
+      <div class="py-8 md:overflow-y-hidden">
 
-      <!-- STEPS -->
-      <div class="px-5  md:px-20 py-7 overflow-auto">
+        <!-- Progress steps -->
+        <div class="px-10 md:px-5">
+        <nz-steps 
+        [nzCurrent]="
+          isActiveTabs === 'target' ? 0 :
+          isActiveTabs === 'self-review' ? 1 :
+          isActiveTabs === 'manager-review' ? 2 :
+          3
+          "
+        >
+        
+          <nz-step nzTitle="Target"></nz-step>
+          <nz-step nzTitle="Self Review"></nz-step>
+          <nz-step nzTitle="Manager Review"></nz-step>
+          <nz-step nzTitle="Complete"
+          [class.complete-step]="isActiveTabs === 'complete'"
+          ></nz-step>
+        </nz-steps>
+        </div>
 
-        <div class="flex items-center">
-
-          <!-- TARGETS -->
-          <div class="flex items-center gap-2 text-base md:text-sm text-gray-900 whitespace-nowrap">
-            <span class="w-6 h-6 md:w-5 md:h-5 rounded-full border border-gray-200 flex items-center justify-center text-xs md:text-[10px]"
-              [class.bg-red-500]="currentStep >= 1"
-              [class.text-white]="currentStep >= 1"
-              [class.border-gray-600]="currentStep < 1"
-              [class.border]="currentStep < 1">
-              1
-            </span>
-
-            <span
-              [class.text-gray-700]="currentStep >= 1"
-              [class.border-gray-200]="currentStep < 1"
-              [class.border]="currentStep < 1"
-            >
-              Target Preview
-            </span>
-
-          </div>
-
-
-          <!-- LINE -->
-          <!-- <div class="w-14 sm:w-20 md:w-40 h-px bg-gray-200 ">
-           
-          </div> -->
-
-          
-
-
-          <!-- SELF REVIEW -->
-          <div class="flex items-center gap-2 text-base md:text-sm text-gray-400 whitespace-nowrap">
-
-            <span class="w-6 h-6 md:w-5 md:h-5 rounded-full border border-gray-200 flex items-center justify-center text-xs md:text-[10px]"
-              [class.bg-red-500]="currentStep >= 1"
-              [class.text-white]="currentStep >= 1">
-              2
-            </span>
-
-            <span>Self-Review</span>
-
-          </div>
-
-
-          <!-- LINE -->
-          <div class="w-14 sm:w-20 md:w-40 h-px bg-gray-200"
-            [class.bg-blue-500]="currentStep >= 2"
-            [class.bg-gray-200]="currentStep < 2"
-          >
-
-          </div>
-
-
-          <!-- MANAGER REVIEW -->
-          <div
-            class="flex items-center gap-2 text-base md:text-sm text-gray-400 whitespace-nowrap">
-
-            <span
-              class="w-6 h-6 md:w-5 md:h-5 rounded-full border border-gray-200 flex items-center justify-center text-xs md:text-[10px]">
-              3
-            </span>
-
-            <span>Manager Review</span>
-
-          </div>
-
-
-          <!-- LINE -->
-          <div class="w-14 sm:w-20 md:w-40 h-px bg-gray-200">
-
-          </div>
-
-
-          <!-- complete -->
-          <div
-            class="flex items-center gap-2 text-base md:text-sm text-gray-400">
-
-            <span
-              class="w-6 h-6 md:w-5 md:h-5 rounded-full border border-gray-200 flex items-center justify-center text-xs md:text-[10px]">
-              4
-            </span>
-
-            <span>Completed</span>
-
-          </div>
-
-        </div> 
-
-       </div>
-
-
-      <!-- DIVIDER -->
-      <div class="h-px w-full bg-gray-200">
+       <!-- DIVIDER -->
+      <div class="h-px w-full bg-gray-200 mt-2">
 
       </div>
 
 
-      <!-- INFORMATION -->
-      <div
-        class="px-5 sm:px-8 md:px-20 py-6 flex flex-col md:flex-row md:items-center gap-5">
-
-        <!-- Completed BUTTON -->
-        <button
-          type="button"
-          class="w-fit bg-green-200 text-green-600 px-4 py-0.5 border border-gray-400 rounded-[10px] text-sm md:text-[12px] font-bold hover:bg-gray-300 transition">
-          Completed
-        </button>
-
+       <!-- INFORMATION -->
+      <div class="px-2 md:px-5 py-3 flex flex-col md:flex-row md:items-center gap-3">
+        <!-- PREVIEW -->
+        <div class="w-fit bg-green-100 text-green-600 px-4 border border-gray-400 rounded-[10px] text-sm md:text-[12px] font-bold hover:bg-gray-300">
+          Complete
+        </div>
 
         <!-- MESSAGE -->
-        <p
-          class="text-base md:text-[13px] font-bold text-gray-700 leading-6 md:leading-5 max-w-2xl">
-          This cycle is complete, including your 
-          manager's rating and comments.
+        <p class="text-base md:text-[13px] font-bold text-gray-700">
+          This cycle is complete, including your manager's ratings and comments.
         </p>
-
       </div>
 
+       </div>
     </div>
-
-    <div>
-    </div>
-  </div>
   </section>
-
-
 
   <section>
 
@@ -245,7 +152,7 @@
 
               <div  class="flex flex-col items-center">
               <p>SCORE</p>
-              <p>48</p>
+              <p class="text-blue-500">48</p>
             </div>
             </div>
 
@@ -266,10 +173,10 @@
           <!-- PERFORMANCE -->
           <div class=" mt-5">
         <p class="font-semibold">PERFORMANCE</p>
-        <p class="text-sm">
+        <span class="text-sm">
           Self-assessed performance of - out of 5 
           against the agreed targets for this KPI.
-        </p>
+        </span>
     </div>
 
         </div>
@@ -302,7 +209,7 @@
       <circle cx="9" cy="7" r="4"/>
       </svg>
 
-      <p class=""> MY COMMENTS</p>
+      <p class="font-semibold"> MY COMMENTS</p>
      
       </div>
 
@@ -316,7 +223,7 @@
 
 
       <div class="mb-10 mt-10  border border-[#E4E7EC] w-full h-[106px] rounded-[16px]">
-      <div class="flex gap-2 mt-6 mx-1 px-2 md:px-4">
+      <div class="flex gap-2 text-[#0084BD] mt-6 mx-1 px-2 md:px-4">
       <svg xmlns="http://www.w3.org/2000/svg" 
       width="24" 
       height="24" 
@@ -332,7 +239,7 @@
     </svg>
 
      <div class="flex gap-2">
-        <p class="text-blue-[#0084BD] whitespace-nowrap"> MANAGERS COMMENTS</p>
+        <p class=" font-semibold whitespace-nowrap"> MANAGERS COMMENTS</p>
         <p class="text-[#000000] text-sm"> Manager rating: 4/5</p>
       </div>
       </div>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NzStepsModule } from 'ng-zorro-antd/steps';
 
 @Component({
   selector: 'app-previous-cycles',
-  imports: [],
+  imports: [NzStepsModule],
   templateUrl: './previous-cycles.html',
   styleUrl: './previous-cycles.scss',
 })
@@ -107,6 +108,14 @@ nextStep() {
   if (this.currentStep < 3) {
     this.currentStep++;
   }
+}
+
+
+
+isActiveTabs = 'complete' 
+
+tabActive(tab: string){
+  this.isActiveTabs = tab
 }
 
 
