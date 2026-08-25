@@ -1,38 +1,15 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection} from '@angular/core';
-
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-
-import { provideNzConfig } from 'ng-zorro-antd/core/config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-
     provideZoneChangeDetection({
       eventCoalescing: true
     }),
-
     provideRouter(routes),
-
-    //   provideNzConfig({
-    //   theme: {
-    //     primaryColor: '#2563eb'
-    //   }
-    // })
-
-   
+    provideAnimationsAsync()
   ]
 };
-
-
-
-// function provideAnimationsAsync(): import("@angular/core").Provider | import("@angular/core").EnvironmentProviders {
-//   throw new Error('Function not implemented.');
-// }
-
- // provideNzConfig({
-    //   theme: {
-    //     primaryColor: '#1677ff'
-    //   }
-    // })
