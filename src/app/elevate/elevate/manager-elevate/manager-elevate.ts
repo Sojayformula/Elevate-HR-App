@@ -7,7 +7,7 @@ import { NzCollapseModule} from 'ng-zorro-antd/collapse'
 
 @Component({
   selector: 'app-manager-elevate',
-  imports: [NzStepsModule, NzCollapseModule, ],
+  imports: [NzStepsModule, NzCollapseModule,],
   templateUrl: './manager-elevate.html',
   styleUrl: './manager-elevate.scss',
 })
@@ -75,20 +75,7 @@ isActiveTabs = 'target'
   //     name: 'This is panel header 3'
   //   }
   // ];
- panels = [
-    {
-      active: false,
-      name: 'This is panel header 1'
-    },
-    {
-      active: false,
-      name: 'This is panel header 2'
-    },
-    {
-      active: false,
-      name: 'This is panel header 3'
-    }
-  ];
+
 
 
 
@@ -171,5 +158,25 @@ goToActivities(){
   }
 
 
+
+
+
+
+
+
+ readonly panels = [
+    {
+      active: true,
+      name: 'This is panel header 1'
+    },
+    {
+      active: false,
+      name: 'This is panel header 2'
+    },
+    {
+      active: false,
+      name: 'This is panel header 3'
+    }
+  ];
 
 }

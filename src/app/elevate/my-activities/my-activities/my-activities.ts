@@ -100,7 +100,7 @@ export class MyActivities implements OnInit{
 
 
 previoursCycle = 'user'
-elevate = "manager"
+elevate = "user"
 
 
 // Table button //
@@ -119,7 +119,7 @@ goToPrevioursCycle(){
 }
 
 
-    role = 'manager'
+    role = 'user'
     goToElevate(){
       if(this.role === 'user'){
         this.router.navigate(["/elevate/user-elevate"])

@@ -55,7 +55,7 @@
   <section class="mx-5 sm:mx-8 md:mx-20 mt-9">
     <div class="bg-white border border-gray-300 rounded-xl ">
       <div class="py-8 h-[150px] overflow-y-hidden">
-        <!-- <div class="px-5">
+        <div class="px-5">
           <nz-steps
           [nzCurrent]="
           isActiveTab === 'target' ? 0 :
@@ -69,29 +69,7 @@
           <nz-step nzTitle="Complete"
           ></nz-step>
         </nz-steps>
-      </div> -->
-
-      <nz-steps
-  [nzCurrent]="
-    isActiveTab === 'target' ? 0 :
-    isActiveTab === 'self-review' ? 1 :
-    isActiveTab === 'manager-review' ? 2 :
-    3
-  "
->
-  <nz-step nzTitle="Target"></nz-step>
-  <nz-step nzTitle="Self Review"></nz-step>
-  <nz-step nzTitle="Manager Review"></nz-step>
-  <nz-step nzTitle="Complete"></nz-step>
-</nz-steps>
-
-      
-      <!-- <nz-steps [nzCurrent]="1" nzStatus="error">
-        <nz-step nzTitle="Finished" nzDescription="This is a description." />
-        <nz-step nzTitle="In Progress" nzDescription="This is a description." />
-        <nz-step nzTitle="Waiting" nzDescription="This is a description." />
-      </nz-steps> -->
-  
+      </div>
       
        
 
@@ -1327,6 +1305,7 @@
       <div class="py-8 h-[150px] overflow-y-hidden">
         <div class="px-5">
           <nz-steps
+          class="complete-highlight"
           [nzCurrent]="
           isActiveTab === 'complete' ? 3 :
           isActiveTab === 'complete' ? 4 :
@@ -1340,8 +1319,9 @@
           [class.complete-step]="isActiveTab === 'complete'"
           ></nz-step>
         </nz-steps>
-      </div>
-       
+        </div>
+        
+    
 
           <!-- DIVIDER -->
           <div class="h-px w-full bg-gray-200 mt-2">
@@ -1511,12 +1491,12 @@
 
           <div class="flex gap-5 mb-5 mx-5 md:mx-0">
             <div class="flex flex-col items-center">
-            <p>RATING</p>
+            <p>PERFORMANCE</p>
             <hr class="mt-2 w-8 md:w-8 border-2">
           </div>
 
             <div class="flex flex-col items-center">
-            <p>PERFORMANCE</p>
+            <p>RATING</p>
             <hr class="mt-2 w-6 md:w-8 border-2">
           </div>
 
@@ -1562,67 +1542,56 @@
           </div>
 
           <!-- COLARPSE -->
-           ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-  <!-- <nz-collapse [nzBordered]="false">
-
-  <nz-collapse-panel nzHeader="Personal Information">
-    <p>Name: John</p>
-    <p>Email: john@example.com</p>
-  </nz-collapse-panel>
-
-  <nz-collapse-panel nzHeader="Security">
-    <p>Password settings</p>
-  </nz-collapse-panel>
-
-  <nz-collapse-panel nzHeader="Notifications">
-    <p>Email notifications</p>
-  </nz-collapse-panel>
-
-</nz-collapse> -->
-
-<nz-collapse>
-  <nz-collapse-panel nzHeader="Click Me">
-
-    <p>
-      Hello! This is the content.
-    </p>
-
-  </nz-collapse-panel>
-</nz-collapse>
-          
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-      </section>
+           <div>
+            <nz-collapse nzAccordion nzExpandIconPosition="end">
+              <nz-collapse-panel nzHeader="Department Management">
+                MY COMMENTS
+                </nz-collapse-panel>
+            </nz-collapse>
 
 
-  </section>
+            <!-- Manager comments -->
+            <nz-collapse nzAccordion nzExpandIconPosition="end">
+              <nz-collapse-panel nzHeader="Department Management">
+                MANAGER COMMENTS
+                </nz-collapse-panel>
+            </nz-collapse>
+            </div>
 
-    </div>
-    </section>
+
+         </section>
+        </section>
+
+        </div>
+        </section>
 
   }
 
 
 
     <!-- manager set target -->
-     <div class="px-6 mt-5 border-2 border-gray-200 bg-blue-50 py-2 mt-10">
-    <div class="flex gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-      width="24" 
-      height="18" 
-      viewBox="0 0 24 24" 
-      fill="none" stroke="currentColor" 
-      stroke-width="2" 
-      stroke-linecap="round" 
-      stroke-linejoin="round" 
-      class="lucide lucide-lock-icon lucide-lock mt-0.5">
-      <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-    </svg>
-      <p>
-        Targets are set by your manager so there is nothing to edit here
-      </p>
-    </div>
-    </div>
+     <section class="flex justify-between px-6 mt-5 border-2 border-gray-200 py-2 mt-10">
+       <div>
+        <p>Learning & Development</p>
+        <span>Weight 15%</span>
+      </div>
+    <div class="flex gap-5 mb-5 mx-5 md:mx-0">
+            <div class="flex flex-col items-center">
+            <p>PERFORMANCE</p>
+            <hr class="mt-2 w-8 md:w-8 border-2">
+          </div>
+
+            <div class="flex flex-col items-center">
+            <p>RATING</p>
+            <hr class="mt-2 w-6 md:w-8 border-2">
+          </div>
+
+            <div  class="flex flex-col items-center">
+            <p>SCORE</p>
+            <hr class="mt-2 w-6 md:w-8 border-2">
+          </div>
+          </div>
+        </section>
 
     
 

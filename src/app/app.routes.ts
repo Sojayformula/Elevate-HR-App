@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { PageLayout } from './elevate/page-layout/page-layout';
 import { Dashboard } from './elevate/dashboard/dashboard';
-import { Elevate } from './elevate/elevat/elevate';
+import { Elevate } from './elevate/elevate/elevate/elevate';
 import { MyActivities } from './elevate/my-activities/my-activities/my-activities';
 import { Others } from './elevate/others/others';
 import { DepartmentPerformance } from './elevate/executive/department-performance/department-performance'; 
@@ -33,7 +33,7 @@ export const routes: Routes = [
         ]
      },
 
-     {path: "elevate", loadComponent: () => import ('./elevate/elevat/elevate').then(m => m.Elevate)},
+     {path: "elevate", loadComponent: () => import ('./elevate/elevate/elevate/elevate').then(m => m.Elevate)},
     {path: "my-activities", loadComponent: () => import ('./elevate/my-activities/my-activities/my-activities').then(m => m.MyActivities)}, 
     {path: "previous-cycles", loadComponent: () => import ('./elevate/my-activities/previous-cycles/previous-cycles').then(m => m.PreviousCycles)},
     {path: "department-performance", loadComponent: () => import ('./elevate/executive/department-performance/department-performance').then(m => m.DepartmentPerformance)},
