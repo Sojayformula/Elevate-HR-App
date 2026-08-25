@@ -22,14 +22,19 @@ export const routes: Routes = [
     {path: "department-performance", component: DepartmentPerformance},
     {path: "manager-performance", component: ManagerPerformance},
     {path: "others", component: Others},
+    
+    // HR Routes
     {path: "performance-cycles", loadComponent: () => import('./elevate/hr/performance-cycles/performance-cycles').then(m => m.PerformanceCycles)},
     {path: "performance-cycles/create-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/create-cycle/create-cycle').then(m => m.CreateCycle)},
     {path: "performance-cycles/edit-cycle", loadComponent: () => import('./elevate/hr/performance-cycles/edit-cycle/edit-cycle').then(m => m.EditCycle)},
+    
     {path: "set-kpi", loadComponent: () => import('./elevate/hr/set-kpi/set-kpi').then(m => m.SetKpi)},
     {path: "create-kpi", loadComponent: () => import('./elevate/hr/set-kpi/create-kpi/create-kpi').then(m => m.CreateKpi)},
     {path: "edit-kpi", loadComponent: () => import('./elevate/hr/set-kpi/edit-kpi/edit-kpi').then(m => m.EditKpi)},
-    {path: "department-management", loadComponent: ()=> import('./elevate/hr/department-management/department-management').then(m => m.DepartmentManagement)}
-
+    
+    {path: "department-management", loadComponent: ()=> import('./elevate/hr/department-management/department-management').then(m => m.DepartmentManagement)},
+    {path: "department-details", loadComponent: ()=> import('./elevate/hr/department-management/department-details/department-details').then(m => m.DepartmentDetails)},
+    {path: "employee-review", loadComponent: ()=> import('./elevate/hr/department-management/employee-review/employee-review').then(m => m.EmployeeReview)}
 ]
     }
 ];
