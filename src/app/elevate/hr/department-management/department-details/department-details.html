@@ -3,11 +3,14 @@
 <div class="min-h-screen bg-[#F7F8FA]">
     <div class="w-full px-[30px] py-[35px]">
 
+                <a href="/department-management" class=" w-[170px] text-[#807777] font-medium mb-[20px] flex items-center gap-[15px] link-select hover:text-[#5BA2F7]">
+            &larr;  Back
+            </a>
         <!-- PAGE HEADER -->
         <div class="flex justify-between items-center mb-[28px]">
             <div class="flex flex-col gap-[6px]">
                 <span class="text-[28px] font-medium text-[#111827]">
-                    Overview
+                    Department Overview
                 </span>
                 <span class="text-[15px] text-gray-400">
                     Goals, performance and employee development
@@ -116,8 +119,33 @@
             </div>
         </section>
 
+            <!-- MANAGER -->
+        <section class="mt-[28px] pb-[40px]">
+            <span class="text-[15px] text-gray-500 uppercase">MANAGER(S)</span>
+            <div class="bg-white border border-[#E1E4E8] rounded-[12px] overflow-hidden mt-[10px]">
 
-        <!-- RECENT SUBMISSIONS -->
+                <!-- SUBMISSION 1 -->
+                <div class="flex items-center justify-between px-[18px] py-[16px] border-b border-[#E5E7EB]">
+                    <div class="flex items-center gap-[12px]">
+                        <div class="w-[38px] h-[38px] rounded-full bg-[#B57AE8]"></div>
+                        <div class="flex flex-col gap-[3px]">
+                            <span class="text-[15px] font-medium">Sally Smith</span>
+                            <span class="text-[15px] text-gray-400">Manager </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-[30px]">
+                        <span class="bg-[#EAF3FF] text-[#4D9BF6] px-[12px] py-[6px] rounded-full text-[15px] font-medium">Submitted</span>
+                        <span class="text-[15px] text-gray-400">Submitted on 29 Sept, 2026</span>
+
+                        <button (click)="goToEmployeeReview()" class="text-[15px] text-[#4D9BF6] font-medium">View →</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EMPLOYEES -->
         <section class="mt-[28px] pb-[40px]">
             <span class="text-[15px] text-gray-500 uppercase">employees</span>
             <div class="bg-white border border-[#E1E4E8] rounded-[12px] overflow-hidden mt-[10px]">
@@ -127,7 +155,7 @@
                     <div class="flex items-center gap-[12px]">
                         <div class="w-[38px] h-[38px] rounded-full bg-[#B57AE8]"></div>
                         <div class="flex flex-col gap-[3px]">
-                            <span class="text-[15px] font-medium">Sally Smith</span>
+                            <span class="text-[15px] font-medium">Janet Doe</span>
                             <span class="text-[15px] text-gray-400">Software Engineer </span>
                         </div>
                     </div>
@@ -145,7 +173,7 @@
                     <div class="flex items-center gap-[12px]">
                         <div class="w-[38px] h-[38px] rounded-full bg-[#B57AE8]"></div>
                         <div class="flex flex-col gap-[3px]">
-                            <span class="text-[15px] font-medium">Sally Smith</span>
+                            <span class="text-[15px] font-medium">Janet Doe</span>
                             <span class="text-[15px] text-gray-400">Software Engineer </span>
                         </div>
                     </div>
@@ -162,7 +190,7 @@
                     <div class="flex items-center gap-[12px]">
                         <div class="w-[38px] h-[38px] rounded-full bg-[#B57AE8]"></div>
                         <div class="flex flex-col gap-[3px]">
-                            <span class="text-[15px] font-medium">Sally Smith</span>
+                            <span class="text-[15px] font-medium">Janet Doe</span>
                             <span class="text-[15px] text-gray-400">Software Engineer </span>
                         </div>
                     </div>
@@ -178,7 +206,7 @@
                     <div class="flex items-center gap-[12px]">
                         <div class="w-[38px] h-[38px] rounded-full bg-[#B57AE8]"></div>
                         <div class="flex flex-col gap-[3px]">
-                            <span class="text-[15px] font-medium">Sally Smith</span>
+                            <span class="text-[15px] font-medium">Janet Doe</span>
                             <span class="text-[15px] text-gray-400">Software Engineer </span>
                         </div>
                     </div>

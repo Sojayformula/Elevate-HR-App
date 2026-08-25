@@ -3,13 +3,11 @@
     <div class="w-full px-[30px] py-[35px]">
 
         <!-- BACK -->
-        <a
-            routerLink="/department-details"
-            class="w-fit text-[#807777] font-medium mb-[22px] flex items-center gap-[10px] hover:text-[#5BA2F7]"
+        <a routerLink="/department-details" class="w-fit text-[15px] text-[#807777] font-medium mb-[22px] flex items-center gap-[10px] hover:text-[#5BA2F7]"
         >
-            &larr; Departments
+            <i class="fa-solid fa-arrow-left text-[13px]"></i>
+            Back
         </a>
-
 
         <!-- EMPLOYEE HEADER -->
         <div class="flex justify-between items-start mb-[28px]">
@@ -32,7 +30,7 @@
                 class="w-[116px] h-[86px] rounded-[12px] border-2 border-[#4D9BF6] bg-white flex flex-col items-center justify-center"
             >
 
-                <span class="text-[12px] font-medium text-[#333] uppercase">
+                <span class="text-[15px] font-medium text-[#333] uppercase">
                     Total Score
                 </span>
 
@@ -53,312 +51,251 @@
             <div class="flex items-center gap-[24px]">
 
                 <span
-                    class="px-[12px] py-[5px] rounded-full bg-[#E8F9F1] text-[#16A36A] text-[13px] font-medium"
+                    class="px-[12px] py-[6px] rounded-full bg-[#E8F9F1] text-[15px] text-[#16A36A] font-medium"
                 >
                     • Reviewed
                 </span>
 
                 <span
-                    class="px-[12px] py-[5px] rounded-full bg-[#FFF0E5] text-[#F3A15B] text-[13px] font-medium"
+                    class="px-[12px] py-[6px] rounded-full bg-[#FFF0E5] text-[15px] text-[#F3A15B] font-medium"
                 >
                     Locked
                 </span>
-
-                <span class="text-[14px] text-gray-400">
+                <span class="text-[15px] text-gray-400">
                     Reviewed on 30 Sept 2026
                 </span>
-
             </div>
-
         </div>
 
 
-        <!-- KPI SECTION -->
-        <section>
+        <!-- KEY PERFORMANCE INDICATORS -->
 
-            <div class="text-[12px] font-medium text-[#222] uppercase mb-[12px]">
-                Key Performance Indicators
+<section>
+    <div class="text-[15px] font-medium text-[#222] uppercase mb-[16px]">
+        Key Performance Indicators
+    </div>
+
+    <!-- KPI 1 -->
+    <div class="bg-white border border-[#E1E4E8] rounded-[12px] p-[22px]">
+        <div class="flex items-center justify-between pb-[20px] border-b border-[#E5E7EB]">
+            <div class="flex flex-col gap-[6px]">
+                <span class="text-[16px] font-semibold text-[#111827]">
+                    Application Development &amp; Delivery
+                </span>
+                <span class="text-[15px] text-gray-400">
+                    Weight: 60%
+                </span>
             </div>
 
-
-            <!-- KPI 1 -->
-            <div
-                class="bg-white border border-[#E1E4E8] rounded-[12px] overflow-hidden mb-[16px]"
-            >
-
-                <!-- KPI HEADER -->
-                <div class="px-[18px] py-[16px]">
-
-                    <div class="flex justify-between items-start">
-
-                        <div>
-
-                            <div class="text-[15px] font-semibold text-[#111827]">
-                                Application Development &amp; Delivery
-                            </div>
-
-                            <div class="text-[13px] text-gray-400 mt-[5px]">
-                                Weight: 60%
-                            </div>
-
-                        </div>
-
-
-                        <!-- RATINGS -->
-                        <div class="flex items-start gap-[28px] text-center">
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Staff Rating
-                                </div>
-
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    4
-                                </div>
-                            </div>
-
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Manager Rating
-                                </div>
-
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    4
-                                </div>
-                            </div>
-
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Total Score
-                                </div>
-
-                                <div class="text-[18px] font-medium text-[#4D9BF6] mt-[4px]">
-                                    48
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="border-t border-[#E5E7EB] mt-[14px] pt-[16px]">
-
-                        <!-- TARGET -->
-                        <div class="text-[12px] font-medium text-[#222] uppercase">
-                            Target
-                        </div>
-
-                        <div class="mt-[8px] flex flex-col gap-[6px]">
-
-                            <span class="text-[14px] text-gray-500">
-                                • Deliver 100% of assigned tasks within agreed sprint timelines.
-                            </span>
-
-                            <span class="text-[14px] text-gray-500">
-                                • Maintain agreed quality standards across all deliverables.
-                            </span>
-
-                        </div>
-
-                    </div>
-
+            <div class="flex items-center gap-[42px] text-center">
+                <div class="min-w-[78px]">
+                    <div class="text-[12px] text-gray-500 uppercase">My Rating</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">4</div>
                 </div>
-
-
-                <!-- COMMENTS -->
-                <div class="px-[16px] pb-[16px]">
-
-                    <nz-collapse [nzBordered]="false">
-
-                        <!-- MY COMMENTS -->
-                        <nz-collapse-panel
-                            nzHeader="My Comments"
-                            [nzActive]="false"
-                        >
-
-                            <div
-                                class="bg-[#F8F6F2] rounded-[10px] px-[16px] py-[14px]"
-                            >
-
-                                <div class="text-[13px] text-gray-500 mb-[6px]">
-                                    Self-assessment
-                                </div>
-
-                                <p class="text-[14px] text-gray-600 m-0">
-                                    I delivered 100% of assigned tasks within agreed sprint timelines.
-                                </p>
-
-                            </div>
-
-                        </nz-collapse-panel>
-
-
-                        <!-- MANAGER COMMENTS -->
-                        <nz-collapse-panel
-                            nzHeader="Manager Comments"
-                            [nzActive]="false"
-                        >
-
-                            <div
-                                class="bg-[#F5FAFF] rounded-[10px] px-[16px] py-[14px]"
-                            >
-
-                                <div class="flex items-center justify-between mb-[6px]">
-
-                                    <div class="text-[13px] text-[#4D9BF6] font-medium">
-                                        Manager assessment
-                                    </div>
-
-                                    <div class="text-[13px] text-gray-500">
-                                        Manager rating: 4/5
-                                    </div>
-
-                                </div>
-
-                                <p class="text-[14px] text-gray-600 m-0">
-                                    Excellent work done!
-                                </p>
-
-                            </div>
-
-                        </nz-collapse-panel>
-
-                    </nz-collapse>
-
+                <div class="min-w-[105px]">
+                    <div class="text-[12px] text-gray-500 uppercase">Manager Rating</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">4</div>
                 </div>
+                <div class="min-w-[78px]">
+                    <div class="text-[12px] text-gray-500 uppercase">Total Score</div>
+                    <div class="text-[15px] font-medium text-[#4D9BF6] mt-[7px]">48</div>
+                </div>
+            </div>
+        </div>
 
+        <div class="mt-[24px] mb-[26px]">
+            <div class="text-[15px] font-medium text-[#222] uppercase mb-[12px]">Target</div>
+            <div class="flex flex-col gap-[9px]">
+                <span class="text-[15px] text-gray-500">• Deliver 100% of assigned tasks within agreed sprint timelines.</span>
+                <span class="text-[15px] text-gray-500">• Maintain agreed quality standards across all deliverables.</span>
+            </div>
+        </div>
+
+        <div class="mb-[24px]">
+            <div class="text-[15px] font-medium text-[#222] uppercase mb-[9px]">Performance</div>
+            <p class="text-[15px] text-gray-500 m-0">
+                Self-assessed performance against the agreed targets for this KPI.
+            </p>
+        </div>
+
+        <details class="group mb-[12px] rounded-[10px] border border-[#E7E3DE] bg-[#F8F6F2]">
+            <summary class="list-none cursor-pointer px-[18px] py-[15px] flex items-center justify-between">
+                <div class="flex items-center gap-[10px]">
+                    <i class="fa-solid fa-user text-[15px] text-[#777]"></i>
+                    <span class="text-[15px] font-medium text-[#555]">My Comments</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-[12px] text-[#777] transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-[18px] pb-[16px]">
+                <p class="text-[15px] text-gray-600 m-0">
+                    I delivered 100% of assigned tasks within agreed sprint timelines.
+                </p>
+            </div>
+        </details>
+
+        <details class="group rounded-[10px] border border-[#DCEAF7] bg-[#F5FAFF]">
+            <summary class="list-none cursor-pointer px-[18px] py-[15px] flex items-center justify-between">
+                <div class="flex items-center gap-[10px]">
+                    <i class="fa-regular fa-comments text-[15px] text-[#4D9BF6]"></i>
+                    <span class="text-[15px] font-medium text-[#4D9BF6]">Manager Comments</span>
+                </div>
+                <div class="flex items-center gap-[18px]">
+                    <span class="text-[15px] text-gray-500">Manager rating: 4/5</span>
+                    <i class="fa-solid fa-chevron-down text-[12px] text-[#777] transition-transform group-open:rotate-180"></i>
+                </div>
+            </summary>
+            <div class="px-[18px] pb-[16px]">
+                <p class="text-[15px] text-gray-600 m-0">Excellent work done!</p>
+            </div>
+        </details>
+    </div>
+
+    <!-- KPI 2 -->
+    <div class="mt-[16px] bg-white border border-[#E1E4E8] rounded-[12px] p-[22px]">
+        <div class="flex items-center justify-between pb-[20px] border-b border-[#E5E7EB]">
+            <div class="flex flex-col gap-[6px]">
+                <span class="text-[16px] font-semibold text-[#111827]">
+                    Operational Efficiency &amp; Code Quality
+                </span>
+                <span class="text-[15px] text-gray-400">Weight: 15%</span>
             </div>
 
-
-            <!-- KPI 2 -->
-            <div
-                class="bg-white border border-[#E1E4E8] rounded-[12px] overflow-hidden mb-[16px]"
-            >
-
-                <div class="px-[18px] py-[16px]">
-
-                    <div class="flex justify-between items-center">
-
-                        <div>
-
-                            <div class="text-[15px] font-semibold text-[#111827]">
-                                Operational Efficiency &amp; Code Quality
-                            </div>
-
-                            <div class="text-[13px] text-gray-400 mt-[5px]">
-                                Weight: 15%
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex items-start gap-[28px] text-center">
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Staff Rating
-                                </div>
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    —
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Manager Rating
-                                </div>
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    —
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Total Score
-                                </div>
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    —
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            <div class="flex items-center gap-[42px] text-center">
+                <div class="min-w-[78px]">
+                    <div class="text-[12px] text-gray-500 uppercase">My Rating</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">—</div>
                 </div>
+                <div class="min-w-[105px]">
+                    <div class="text-[12px] text-gray-500 uppercase">Manager Rating</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">—</div>
+                </div>
+                <div class="min-w-[78px]">
+                    <div class="text-[12px] text-gray-500 uppercase">Total Score</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">—</div>
+                </div>
+            </div>
+        </div>
 
+        <div class="mt-[24px] mb-[26px]">
+            <div class="text-[15px] font-medium text-[#222] uppercase mb-[12px]">Target</div>
+            <div class="flex flex-col gap-[9px]">
+                <span class="text-[15px] text-gray-500">• Maintain agreed code quality standards across all deliverables.</span>
+                <span class="text-[15px] text-gray-500">• Complete assigned development tasks within agreed timelines.</span>
+            </div>
+        </div>
+
+        <div class="mb-[24px]">
+            <div class="text-[15px] font-medium text-[#222] uppercase mb-[9px]">Performance</div>
+            <p class="text-[15px] text-gray-500 m-0">
+                Performance information submitted for this KPI.
+            </p>
+        </div>
+
+        <details class="group mb-[12px] rounded-[10px] border border-[#E7E3DE] bg-[#F8F6F2]">
+            <summary class="list-none cursor-pointer px-[18px] py-[15px] flex items-center justify-between">
+                <div class="flex items-center gap-[10px]">
+                    <i class="fa-solid fa-user text-[15px] text-[#777]"></i>
+                    <span class="text-[15px] font-medium text-[#555]">My Comments</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-[12px] text-[#777] transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-[18px] pb-[16px]">
+                <p class="text-[15px] text-gray-600 m-0">Employee comments for this KPI.</p>
+            </div>
+        </details>
+
+        <details class="group rounded-[10px] border border-[#DCEAF7] bg-[#F5FAFF]">
+            <summary class="list-none cursor-pointer px-[18px] py-[15px] flex items-center justify-between">
+                <div class="flex items-center gap-[10px]">
+                    <i class="fa-regular fa-comments text-[15px] text-[#4D9BF6]"></i>
+                    <span class="text-[15px] font-medium text-[#4D9BF6]">Manager Comments</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-[12px] text-[#777] transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-[18px] pb-[16px]">
+                <p class="text-[15px] text-gray-600 m-0">Manager comments for this KPI.</p>
+            </div>
+        </details>
+    </div>
+
+    <!-- KPI 3 -->
+    <div class="mt-[16px] bg-white border border-[#E1E4E8] rounded-[12px] p-[22px]">
+        <div class="flex items-center justify-between pb-[20px] border-b border-[#E5E7EB]">
+            <div class="flex flex-col gap-[6px]">
+                <span class="text-[16px] font-semibold text-[#111827]">
+                    Learning &amp; Development
+                </span>
+                <span class="text-[15px] text-gray-400">Weight: 15%</span>
             </div>
 
-
-            <!-- KPI 3 -->
-            <div
-                class="bg-white border border-[#E1E4E8] rounded-[12px] overflow-hidden mb-[16px]"
-            >
-
-                <div class="px-[18px] py-[16px]">
-
-                    <div class="flex justify-between items-center">
-
-                        <div>
-
-                            <div class="text-[15px] font-semibold text-[#111827]">
-                                Learning &amp; Development
-                            </div>
-
-                            <div class="text-[13px] text-gray-400 mt-[5px]">
-                                Weight: 15%
-                            </div>
-
-                        </div>
-
-
-                        <div class="flex items-start gap-[28px] text-center">
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Staff Rating
-                                </div>
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    —
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Manager Rating
-                                </div>
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    —
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="text-[11px] text-gray-500 uppercase">
-                                    Total Score
-                                </div>
-                                <div class="text-[18px] font-medium mt-[4px]">
-                                    —
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            <div class="flex items-center gap-[42px] text-center">
+                <div class="min-w-[78px]">
+                    <div class="text-[12px] text-gray-500 uppercase">My Rating</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">—</div>
                 </div>
-
+                <div class="min-w-[105px]">
+                    <div class="text-[12px] text-gray-500 uppercase">Manager Rating</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">—</div>
+                </div>
+                <div class="min-w-[78px]">
+                    <div class="text-[12px] text-gray-500 uppercase">Total Score</div>
+                    <div class="text-[15px] font-medium text-[#111827] mt-[7px]">—</div>
+                </div>
             </div>
+        </div>
 
-        </section>
+        <div class="mt-[24px] mb-[26px]">
+            <div class="text-[15px] font-medium text-[#222] uppercase mb-[12px]">Target</div>
+            <div class="flex flex-col gap-[9px]">
+                <span class="text-[15px] text-gray-500">• Complete required learning and development activities.</span>
+                <span class="text-[15px] text-gray-500">• Demonstrate continuous improvement in assigned responsibilities.</span>
+            </div>
+        </div>
+
+        <div class="mb-[24px]">
+            <div class="text-[15px] font-medium text-[#222] uppercase mb-[9px]">Performance</div>
+            <p class="text-[15px] text-gray-500 m-0">
+                Performance information submitted for this KPI.
+            </p>
+        </div>
+
+        <details class="group mb-[12px] rounded-[10px] border border-[#E7E3DE] bg-[#F8F6F2]">
+            <summary class="list-none cursor-pointer px-[18px] py-[15px] flex items-center justify-between">
+                <div class="flex items-center gap-[10px]">
+                    <i class="fa-solid fa-user text-[15px] text-[#777]"></i>
+                    <span class="text-[15px] font-medium text-[#555]">My Comments</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-[12px] text-[#777] transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-[18px] pb-[16px]">
+                <p class="text-[15px] text-gray-600 m-0">Employee comments for this KPI.</p>
+            </div>
+        </details>
+
+        <details class="group rounded-[10px] border border-[#DCEAF7] bg-[#F5FAFF]">
+            <summary class="list-none cursor-pointer px-[18px] py-[15px] flex items-center justify-between">
+                <div class="flex items-center gap-[10px]">
+                    <i class="fa-regular fa-comments text-[15px] text-[#4D9BF6]"></i>
+                    <span class="text-[15px] font-medium text-[#4D9BF6]">Manager Comments</span>
+                </div>
+                <i class="fa-solid fa-chevron-down text-[12px] text-[#777] transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-[18px] pb-[16px]">
+                <p class="text-[15px] text-gray-600 m-0">Manager comments for this KPI.</p>
+            </div>
+        </details>
+    </div>
+
+</section>
 
 
-        <!-- HR → MANAGER CORRECTION REQUEST -->
+        <!-- REVIEW ACTIONS -->
+
         <section class="mt-[35px] mb-[40px]">
 
-            <div class="text-[12px] font-medium text-[#222] uppercase mb-[12px]">
+            <div
+                class="text-[15px] font-medium text-[#222] uppercase mb-[12px]"
+            >
                 Review Actions
             </div>
 
@@ -371,11 +308,15 @@
 
                     <div>
 
-                        <div class="text-[17px] font-medium text-[#111827]">
+                        <div
+                            class="text-[17px] font-medium text-[#111827]"
+                        >
                             Request a correction
                         </div>
 
-                        <p class="text-[14px] text-gray-400 mt-[5px] mb-0">
+                        <p
+                            class="text-[15px] text-gray-400 mt-[5px] mb-0"
+                        >
                             If something in this review needs to be corrected,
                             send a request directly to the employee's manager.
                         </p>
@@ -384,7 +325,7 @@
 
 
                     <span
-                        class="text-[12px] px-[10px] py-[5px] rounded-full bg-[#FFF7E8] text-[#D99118]"
+                        class="text-[15px] px-[10px] py-[6px] rounded-full bg-[#FFF7E8] text-[#D99118]"
                     >
                         Manager action required
                     </span>
@@ -394,24 +335,33 @@
 
                 <div class="mt-[20px]">
 
-                    <label class="text-[13px] font-medium text-[#444]">
+                    <label
+                        class="text-[15px] font-medium text-[#444]"
+                    >
                         Message to manager
                     </label>
 
                     <textarea
                         rows="4"
                         placeholder="Explain what needs to be corrected..."
-                        class="mt-[8px] w-full rounded-[10px] border border-[#D8DCE2] bg-[#FAFBFC] px-[14px] py-[12px] text-[14px] text-[#444] outline-none resize-none focus:border-[#4D9BF6]"
+                        class="mt-[8px] w-full rounded-[10px] border border-[#D8DCE2] bg-[#FAFBFC] px-[14px] py-[12px] text-[15px] text-[#444] outline-none resize-none focus:border-[#4D9BF6]"
                     ></textarea>
 
                 </div>
 
 
-                <div class="flex justify-end mt-[16px]">
+                <div class="flex justify-end gap-[10px] mt-[16px]">
 
                     <button
                         type="button"
-                        class="px-[18px] py-[10px] rounded-[8px] bg-[#4D9BF6] text-white text-[14px] font-medium hover:bg-[#3D8DE8]"
+                        class="px-[18px] py-[10px] rounded-[8px] border border-[#D8DCE2] bg-white text-[#555] text-[15px] font-medium hover:bg-[#F7F8FA]"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="px-[18px] py-[10px] rounded-[8px] bg-[#4D9BF6] text-white text-[15px] font-medium hover:bg-[#3D8DE8]"
                     >
                         Send to Manager
                     </button>
@@ -425,3 +375,5 @@
     </div>
 
 </div>
+
+

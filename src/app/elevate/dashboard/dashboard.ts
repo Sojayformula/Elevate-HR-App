@@ -34,4 +34,8 @@ goToDepartmentManagement(){
   this.router.navigate(["/department-management"])
 }
 
+goToDepartmentDetails(){
+  this.router.navigate(["/department-details"])
+}
+
 }
